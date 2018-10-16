@@ -3,3 +3,728 @@
 2018-10-16 14:54:45,184 :: INFO :: logging in using static token
 2018-10-16 14:54:46,452 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
 2018-10-16 14:54:46,455 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 15:37:08,246 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 15:37:08,247 :: INFO :: logging in using static token
+2018-10-16 15:37:08,947 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 15:37:08,949 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 15:38:24,614 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 15:38:24,616 :: INFO :: logging in using static token
+2018-10-16 15:38:25,317 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 15:38:25,319 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 15:39:50,936 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 15:39:50,937 :: INFO :: logging in using static token
+2018-10-16 15:39:51,617 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 15:39:51,618 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 15:53:05,345 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 15:53:05,346 :: INFO :: logging in using static token
+2018-10-16 15:53:06,068 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 15:53:06,069 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:03:11,616 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:03:11,617 :: INFO :: logging in using static token
+2018-10-16 16:03:12,370 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:03:12,371 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:03:36,517 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:03:36,518 :: INFO :: logging in using static token
+2018-10-16 16:03:37,194 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:03:37,196 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:18:23,699 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:18:23,699 :: INFO :: logging in using static token
+2018-10-16 16:18:24,467 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:18:24,468 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:19:17,187 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:19:17,188 :: INFO :: logging in using static token
+2018-10-16 16:19:17,854 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:19:17,855 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:20:19,572 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:20:19,573 :: INFO :: logging in using static token
+2018-10-16 16:20:20,283 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:20:20,284 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:22:05,549 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:22:05,549 :: INFO :: logging in using static token
+2018-10-16 16:22:06,290 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:22:06,291 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:22:53,384 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:22:53,384 :: INFO :: logging in using static token
+2018-10-16 16:22:54,080 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:22:54,082 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:24:17,636 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:24:17,636 :: INFO :: logging in using static token
+2018-10-16 16:24:18,352 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:24:18,353 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:27:28,954 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:27:28,955 :: INFO :: logging in using static token
+2018-10-16 16:27:29,675 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:27:29,675 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:28:43,987 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:28:43,988 :: INFO :: logging in using static token
+2018-10-16 16:28:44,664 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:28:44,665 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:29:42,860 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:29:42,861 :: INFO :: logging in using static token
+2018-10-16 16:29:43,554 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:29:43,555 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:30:21,116 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:30:21,116 :: INFO :: logging in using static token
+2018-10-16 16:30:21,796 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:30:21,797 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:32:01,643 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:32:01,644 :: INFO :: logging in using static token
+2018-10-16 16:32:02,293 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:32:02,294 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:33:42,088 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:33:42,089 :: INFO :: logging in using static token
+2018-10-16 16:33:42,803 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:33:42,804 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:34:57,609 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:34:57,610 :: INFO :: logging in using static token
+2018-10-16 16:34:58,308 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:34:58,309 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:35:57,899 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:35:58,355 :: INFO :: logging in using static token
+2018-10-16 16:35:59,018 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:35:59,021 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:36:12,385 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:36:12,386 :: INFO :: logging in using static token
+2018-10-16 16:36:13,026 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:36:13,027 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:37:00,895 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:37:00,896 :: INFO :: logging in using static token
+2018-10-16 16:37:01,614 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:37:01,615 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:37:24,523 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:37:24,524 :: INFO :: logging in using static token
+2018-10-16 16:37:25,190 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:37:25,191 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:37:29,337 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 60, in restart
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 16:37:33,249 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:37:33,250 :: INFO :: logging in using static token
+2018-10-16 16:37:33,903 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:37:33,905 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:37:45,929 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:37:45,929 :: INFO :: logging in using static token
+2018-10-16 16:37:46,602 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:37:46,603 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:43:46,531 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:43:46,531 :: INFO :: logging in using static token
+2018-10-16 16:43:47,329 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:43:47,330 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:46:06,795 :: INFO :: Websocket closed with 4003 (Not authenticated.), attempting a reconnect.
+2018-10-16 16:46:06,796 :: INFO :: Got ResumeWebSocket
+2018-10-16 16:46:07,143 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:46:07,145 :: INFO :: sent the resume payload to create the websocket
+2018-10-16 16:46:07,986 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:07,987 :: INFO :: logging in using static token
+2018-10-16 16:46:09,020 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:09,021 :: INFO :: logging in using static token
+2018-10-16 16:46:09,958 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:09,959 :: INFO :: logging in using static token
+2018-10-16 16:46:10,886 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:10,887 :: INFO :: logging in using static token
+2018-10-16 16:46:11,924 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:11,926 :: INFO :: logging in using static token
+2018-10-16 16:46:12,937 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:12,947 :: INFO :: logging in using static token
+2018-10-16 16:46:14,050 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:14,051 :: INFO :: logging in using static token
+2018-10-16 16:46:15,087 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:15,087 :: INFO :: logging in using static token
+2018-10-16 16:46:16,077 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:16,078 :: INFO :: logging in using static token
+2018-10-16 16:46:17,064 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:17,068 :: INFO :: logging in using static token
+2018-10-16 16:46:18,047 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:46:18,048 :: INFO :: logging in using static token
+2018-10-16 16:46:18,728 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:46:18,731 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:54:11,817 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 60, in restart
+    mine = discord.ChannelPermissions(target=server.me, overwrite=my_perms)
+SystemExit: 0
+2018-10-16 16:54:12,354 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:54:12,355 :: INFO :: logging in using static token
+2018-10-16 16:54:13,048 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:54:13,050 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:54:46,942 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 65, in restart
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 16:54:47,500 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:54:47,501 :: INFO :: logging in using static token
+2018-10-16 16:54:48,187 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:54:48,189 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:55:11,586 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 65, in restart
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 16:55:12,139 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:55:12,139 :: INFO :: logging in using static token
+2018-10-16 16:55:12,850 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:55:12,852 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:55:48,814 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 65, in r
+SystemExit: 0
+2018-10-16 16:55:49,334 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:55:49,335 :: INFO :: logging in using static token
+2018-10-16 16:55:49,987 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:55:49,990 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:56:23,674 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 60, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 16:56:24,239 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:56:24,239 :: INFO :: logging in using static token
+2018-10-16 16:56:24,906 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:56:24,908 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:56:40,516 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 60, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 16:56:41,065 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 16:56:41,066 :: INFO :: logging in using static token
+2018-10-16 16:56:41,732 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 16:56:41,734 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 16:59:45,085 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 60, in r
+SystemExit: 0
+2018-10-16 17:00:10,173 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:00:10,173 :: INFO :: logging in using static token
+2018-10-16 17:00:10,896 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:00:10,898 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:01:15,544 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:01:16,079 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:01:16,080 :: INFO :: logging in using static token
+2018-10-16 17:01:16,788 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:01:16,789 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:01:40,126 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:01:49,585 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:01:49,586 :: INFO :: logging in using static token
+2018-10-16 17:01:50,369 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:01:50,371 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:02:32,333 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:02:37,200 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:02:37,204 :: INFO :: logging in using static token
+2018-10-16 17:02:37,942 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:02:37,945 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:02:49,814 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:02:50,333 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:02:50,334 :: INFO :: logging in using static token
+2018-10-16 17:02:50,986 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:02:50,987 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:03:21,475 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:03:22,016 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:03:22,017 :: INFO :: logging in using static token
+2018-10-16 17:03:22,687 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:03:22,689 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:03:32,470 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:03:33,025 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:03:33,026 :: INFO :: logging in using static token
+2018-10-16 17:03:33,673 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:03:33,676 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:04:17,976 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:04:18,500 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:04:18,500 :: INFO :: logging in using static token
+2018-10-16 17:04:19,190 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:04:19,192 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:04:46,622 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:04:47,185 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:04:47,186 :: INFO :: logging in using static token
+2018-10-16 17:04:47,857 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:04:47,859 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:10:01,747 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 64, in r
+SystemExit: 0
+2018-10-16 17:10:02,331 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:10:02,331 :: INFO :: logging in using static token
+2018-10-16 17:10:03,094 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:10:03,097 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:11:15,130 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 63, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:11:15,716 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:11:15,717 :: INFO :: logging in using static token
+2018-10-16 17:11:16,428 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:11:16,429 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:11:24,134 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 63, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-16 17:11:24,674 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:11:24,674 :: INFO :: logging in using static token
+2018-10-16 17:11:25,340 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:11:25,342 :: INFO :: sent the identify payload to create the websocket
+2018-10-16 17:15:21,541 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:304> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 519, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 307, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 63, in r
+    @client.command()
+SystemExit: 0
+2018-10-16 17:15:22,116 :: INFO :: on_ready has successfully been registered as an event
+2018-10-16 17:15:22,117 :: INFO :: logging in using static token
+2018-10-16 17:15:22,834 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-16 17:15:22,836 :: INFO :: sent the identify payload to create the websocket

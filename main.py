@@ -2,14 +2,11 @@
 import discord, asyncio
 from discord.ext.commands import Bot
 from discord.ext import commands
-import time, os, calendar, platform, requests, threading
+import time, os, calendar, platform, requests, threading, sys
 import logging
 from logging.handlers import RotatingFileHandler
 
 from classes.Environment import Environment
-
-#File [GLOBAL][INFO]
-filePath = "dist/alreadyPick.txt"
 
 #========================================================
 #===============		LOGGER			=================
@@ -49,8 +46,22 @@ async def on_ready():
 	print('Use this link to invite {}:'.format(client.user.name))
 	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
 	print('--------')
-	print('You are running The Reverse V0.1')
-	print('Created by himself from the future')
-	return await client.change_presence(game=discord.Game(name='Creating himself'))
+	print('You are running {} {}'.format(Environment.creator['name'], Environment.creator['version']))
+	print(Environment.creator['description'])
+	return await client.change_presence(game=discord.Game(name=Environment.creator['game']['name']))
+
+@client.command(pass_context = True)
+async def newChannel(ctx, channelName):
+	#Define permission for creator
+	permissionCreator = discord.PermissionOverwrite(read_messages=True, manage_channels=True)
+	#Define permission for everyone
+	permissionEveryone = discord.PermissionOverwrite(read_messages=False)
+	#Define permission for creator
+	await client.create_channel(ctx.message.server, channelName, (ctx.message.server.default_role, permissionEveryone), (ctx.message.server.me, permissionCreator))
+
+
+@client.command()
+async def r():
+	sys.exit(0)
 
 client.run(Environment.token)
