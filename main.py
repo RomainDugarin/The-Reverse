@@ -57,7 +57,7 @@ async def newChannel(ctx, channelName):
 	#Define permission for everyone
 	permissionEveryone = discord.PermissionOverwrite(read_messages=False)
 	#Define permission for creator
-	await client.create_channel(ctx.message.server, channelName, (ctx.message.server.default_role, permissionEveryone), (ctx.message.server.me, permissionCreator))
+	await client.create_channel(ctx.message.server, channelName, (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator))
 
 
 @client.command()
