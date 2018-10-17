@@ -1,7 +1,7 @@
 ﻿# These are the dependecies. The bot depends on these to function, hence the name. Please do not change these unless your adding to them, because they can break the bot.
 import discord, asyncio
-from discord.ext.commands import Bot
-from discord.ext import commands
+from lib.discord.ext.commands import Bot
+from lib.discord.ext import commands
 import time, os, calendar, platform, requests, threading, sys
 import logging
 from logging.handlers import RotatingFileHandler
@@ -53,12 +53,21 @@ async def on_ready():
 @client.command(pass_context = True)
 async def newChannel(ctx, channelName):
 	#Define permission for creator
-	permissionCreator = discord.PermissionOverwrite(read_messages=True, manage_channels=True)
+	permissionCreator = discord.PermissionOverwrite(read_messages=True, manage_channels=True, manage_roles=True)
 	#Define permission for everyone
 	permissionEveryone = discord.PermissionOverwrite(read_messages=False)
-	#Define permission for creator
-	await client.create_channel(ctx.message.server, channelName, (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator))
+	if not Environment.server.get(ctx.message.server.id):
+		await client.say('Doesn\'t exist, ask admin to create one.')
+	else:
+		#Define permission for creator
+		await client.create_channel(ctx.message.server, channelName, Environment.server[ctx.message.server.id]['privateConversation_id'], (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator))
 
+@client.command(pass_context = True)
+async def setPrivateCategory(ctx, categoryID):
+	if Environment.server.get(ctx.message.server.id):
+		await client.say('Key exist')
+	Environment.server[ctx.message.server.id] = { 'privateConversation_id': categoryID }
+	await client.say(Environment.server[ctx.message.server.id]['privateConversation_id'])
 
 @client.command()
 async def r():

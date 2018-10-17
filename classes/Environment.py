@@ -11,6 +11,11 @@ class Environment:
 		'version': 'V0.1',
 		'description': 'Created by himself from the future.'
 	}
+	server = {
+		'id' : {
+			'privateConversation_id': None
+		}
+	}
 
 	def __init__(self):
 		return 
