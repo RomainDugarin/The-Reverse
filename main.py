@@ -6,7 +6,11 @@ import time, os, calendar, platform, requests, threading, sys
 import logging
 from logging.handlers import RotatingFileHandler
 
+#Environment variable
 from classes.Environment import Environment
+
+#Abstract Class
+from classes.channel import abstractChannel
 
 #========================================================
 #===============		LOGGER			=================
@@ -50,27 +54,47 @@ async def on_ready():
 	print(Environment.creator['description'])
 	return await client.change_presence(game=discord.Game(name=Environment.creator['game']['name']))
 
+#TO REWORK Emoji custom/Emoji str
+@client.event
+async def on_reaction_add(reaction, user):
+	if user.permissions_in(reaction.message.channel).administrator:
+		if reaction.emoji == '👊':
+			try:
+				await client.kick(reaction.message.author)
+				await client.send_message(reaction.message.channel, 'Ouf, tu vas te prendre une punch {}'.format(reaction.message.author.mention))
+			except:
+				await client.send_message(reaction.message.channel, 'Ouf, tu as esquivé de justesse le punch {}'.format(reaction.message.author.mention))		
+
 @client.command(pass_context = True)
-async def newChannel(ctx, channelName):
+async def newChannel(ctx, channelName, type=None):
+	#Search for the channelType value
+	if type is not None:
+		for channelType in discord.ChannelType:
+			if type == channelType.name: type = channelType
 	#Define permission for creator
 	permissionCreator = discord.PermissionOverwrite(read_messages=True, manage_channels=True, manage_roles=True)
 	#Define permission for everyone
 	permissionEveryone = discord.PermissionOverwrite(read_messages=False)
 	if not Environment.server.get(ctx.message.server.id):
-		await client.say('Doesn\'t exist, ask admin to create one.')
+		await client.say('Private category for conversation doesn\'t exist, ask admin to create one.')
 	else:
 		#Define permission for creator
-		await client.create_channel(ctx.message.server, channelName, Environment.server[ctx.message.server.id]['privateConversation_id'], (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator))
+		await client.create_channel(ctx.message.server, channelName, Environment.server[ctx.message.server.id]['privateConversation_id'], (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator), type=type)
 
 @client.command(pass_context = True)
-async def setPrivateCategory(ctx, categoryID):
-	if Environment.server.get(ctx.message.server.id):
-		await client.say('Key exist')
-	Environment.server[ctx.message.server.id] = { 'privateConversation_id': categoryID }
-	await client.say(Environment.server[ctx.message.server.id]['privateConversation_id'])
+async def setPrivateCategory(ctx, categoryName):
+	category = abstractChannel.findChannel(ctx, categoryName)
+	if category is not None:
+		if Environment.server.get(ctx.message.server.id):
+			await client.send_message(ctx.message.channel, 'Key exist')
+		Environment.server[ctx.message.server.id] = { 'privateConversation_id': category.id }
+		await client.send_message(ctx.message.channel, 'The private conversation category set to {}.'.format(category.name))
+	else:
+		await client.send_message(ctx.message.channel, 'No category found.')
 
 @client.command()
 async def r():
 	sys.exit(0)
+
 
 client.run(Environment.token)
