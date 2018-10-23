@@ -5,6 +5,7 @@ class Environment:
 	token = 'NTAxNzE5ODUxNzQwNTYxNDA4.DqeLLw.LYltOgK0Ho38SSa5HcwluXV7Xo8'
 	creator = {
 		'name': 'The Reverse Guy',
+		'id': 124598335230312448,
 		'game' : {
 			'name': 'Creating himself.',
 		},
