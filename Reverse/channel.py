@@ -4,7 +4,7 @@ import discord
 #   LIBRARY Channel FUNCTION
 #
 #
-class abstractChannel():
+class channel():
 
     def findChannel(ctx, categoryName):
         try:

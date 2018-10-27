@@ -1,6 +1,6 @@
 # coding: utf-8
 
-class Environment:
+class environment:
 
 	token = 'NTAxNzE5ODUxNzQwNTYxNDA4.DqeLLw.LYltOgK0Ho38SSa5HcwluXV7Xo8'
 	creator = {
@@ -17,6 +17,7 @@ class Environment:
 			'privateConversation_id': None
 		}
 	}
+	API_URL = 'http://localhost:9000/api/'
 
 	def __init__(self):
 		return 

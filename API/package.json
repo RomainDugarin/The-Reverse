@@ -1,0 +1,19 @@
+{
+    "name": "node-mysql-api",
+    "version": "1.0.0",
+    "description": "Node MySQL API",
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "^1.0.2",
+        "express": "^4.0.0",
+        "http-auth": "^2.2.9",
+        "module": "^1.2.5",
+        "mysql": "^2.9.0",
+        "sequelize": "^3.33.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Arjun Komath",
+    "license": "ISC"
+}

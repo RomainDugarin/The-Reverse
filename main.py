@@ -3,14 +3,12 @@ import discord, asyncio
 from lib.discord.ext.commands import Bot
 from lib.discord.ext import commands
 import time, os, calendar, platform, requests, threading, sys
-import logging
+import logging, json
 from logging.handlers import RotatingFileHandler
 
-#Environment variable
-from classes.Environment import Environment
 
-#Abstract Class
-from classes.channel import abstractChannel
+#Reverse
+from Reverse import reverseClient, environment
 
 #========================================================
 #===============		LOGGER			=================
@@ -40,6 +38,7 @@ logger.addHandler(stream_handler)
 #======================================================
 
 client = Bot(description="The Reverse", command_prefix="-", pm_help = False)
+reverseClient = reverseClient()
 
 @client.event
 async def on_ready():
@@ -50,24 +49,32 @@ async def on_ready():
 	print('Use this link to invite {}:'.format(client.user.name))
 	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
 	print('--------')
-	print('You are running {} {}'.format(Environment.creator['name'], Environment.creator['version']))
-	print(Environment.creator['description'])
-	return await client.change_presence(game=discord.Game(name=Environment.creator['game']['name']))
+	print('You are running {} {}'.format(reverseClient.creator['name'], reverseClient.creator['version']))
+	print(reverseClient.creator['description'])
+	await reverseClient.registerServers(client.servers)
+	return await client.change_presence(game=discord.Game(name=reverseClient.creator['game']['name']))
 
-#TO REWORK Emoji custom/Emoji str
 @client.event
 async def on_reaction_add(reaction, user):
 	if user.permissions_in(reaction.message.channel).administrator:
 		if reaction.emoji == '👊':
 			try:
 				await client.kick(reaction.message.author)
-				await client.send_message(reaction.message.channel, 'Ouf, tu vas te prendre une punch {}'.format(reaction.message.author.mention))
+				await client.send_message(reaction.message.channel, 'Ouf, tu vas te prendre un punch {}'.format(reaction.message.author.mention))
 			except:
-				await client.send_message(reaction.message.channel, 'Ouf, tu as esquivé de justesse le punch {}'.format(reaction.message.author.mention))		
+				await client.send_message(reaction.message.channel, 'Ouf, tu as esquivé de justesse le punch {}'.format(reaction.message.author.mention))
+
+# Register the new user
+async def registerMember(ctx):
+	r = reverseClient.registerMember(ctx)
+	# Logger
+	logger.info('Post : {} <- {}'.format(r.url, r.json))	
+	
 
 @client.command(pass_context = True)
 async def newChannel(ctx, channelName, type=None):
 	#Search for the channelType value
+	await registerMember(ctx.message.author)
 	if type is not None:
 		for channelType in discord.ChannelType:
 			if type == channelType.name: type = channelType
@@ -83,7 +90,7 @@ async def newChannel(ctx, channelName, type=None):
 
 @client.command(pass_context = True)
 async def setPrivateCategory(ctx, categoryName):
-	category = abstractChannel.findChannel(ctx, categoryName)
+	category = reverseClient.findChannel(ctx, categoryName)
 	if category is not None:
 		if Environment.server.get(ctx.message.server.id):
 			await client.send_message(ctx.message.channel, 'Key exist')
@@ -97,4 +104,4 @@ async def r():
 	sys.exit(0)
 
 
-client.run(Environment.token)
+client.run(environment.token)
