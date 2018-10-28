@@ -69,7 +69,10 @@ async def registerMember(ctx):
 	r = reverseClient.registerMember(ctx)
 	# Logger
 	logger.info('Post : {} <- {}'.format(r.url, r.json))	
-	
+
+@client.command(pass_context = True)
+async def nwb(ctx, name):
+	await client.create_webhook(ctx.message.channel, name)
 
 @client.command(pass_context = True)
 async def newChannel(ctx, channelName, type=None):
