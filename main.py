@@ -66,13 +66,12 @@ async def on_reaction_add(reaction, user):
 
 # Register the new user
 async def registerMember(ctx):
-	r = reverseClient.registerMember(ctx)
-	# Logger
-	logger.info('Post : {} <- {}'.format(r.url, r.json))	
+	r = await reverseClient.registerMember(ctx)	
 
 @client.command(pass_context = True)
-async def nwb(ctx, name):
-	await client.create_webhook(ctx.message.channel, name)
+async def newWebhook(ctx, name):
+	webhook = await client.create_webhook(ctx.message.channel, name)
+	await client.send_message(ctx.message.channel, webhook.url)
 
 @client.command(pass_context = True)
 async def newChannel(ctx, channelName, type=None):
@@ -85,19 +84,19 @@ async def newChannel(ctx, channelName, type=None):
 	permissionCreator = discord.PermissionOverwrite(read_messages=True, manage_channels=True, manage_roles=True)
 	#Define permission for everyone
 	permissionEveryone = discord.PermissionOverwrite(read_messages=False)
-	if not Environment.server.get(ctx.message.server.id):
+	if not reverseClient.server.get(ctx.message.server.id):
 		await client.say('Private category for conversation doesn\'t exist, ask admin to create one.')
 	else:
 		#Define permission for creator
-		await client.create_channel(ctx.message.server, channelName, Environment.server[ctx.message.server.id]['privateConversation_id'], (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator), type=type)
+		await client.create_channel(ctx.message.server, channelName, reverseClient.server[ctx.message.server.id]['privateConversation_id'], (ctx.message.server.default_role, permissionEveryone), (ctx.message.author, permissionCreator), type=type)
 
 @client.command(pass_context = True)
 async def setPrivateCategory(ctx, categoryName):
-	category = reverseClient.findChannel(ctx, categoryName)
+	category = await reverseClient.findChannel(ctx.message.server.channels, categoryName)
 	if category is not None:
-		if Environment.server.get(ctx.message.server.id):
+		if reverseClient.server.get(ctx.message.server.id):
 			await client.send_message(ctx.message.channel, 'Key exist')
-		Environment.server[ctx.message.server.id] = { 'privateConversation_id': category.id }
+		reverseClient.server[ctx.message.server.id] = { 'privateConversation_id': category.id }
 		await client.send_message(ctx.message.channel, 'The private conversation category set to {}.'.format(category.name))
 	else:
 		await client.send_message(ctx.message.channel, 'No category found.')
@@ -107,4 +106,4 @@ async def r():
 	sys.exit(0)
 
 
-client.run(environment.token)
+client.run(reverseClient.token)

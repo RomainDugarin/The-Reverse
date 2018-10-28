@@ -1,8 +1,9 @@
 
 import requests, json
 from .environment import environment
+import discord
 from .http import http
-from .models import server
+from .models import Member, Server
 
 class reverseClient:
 
@@ -30,12 +31,12 @@ class reverseClient:
         for cs in connectedServers:
             if cs.icon_url is None:
                 print('none')
-            value = server(cs.id, cs.name, cs.region, cs.icon, cs.large, cs.unavailable, cs.created_at, cs.member_count, cs.splash_url, cs.icon_url)
+            value = Server(cs.id, cs.name, cs.region, cs.icon, cs.large, cs.unavailable, cs.created_at, cs.member_count, cs.splash_url, cs.icon_url)
             await self.api.post('servers', json=value.__dict__())
 
     def registerMember(self, user):
-        member = member(user.id, user.name, user.mention, user.created_at, user.avatar_url)
-        return self.api.post('users', json=member)
+        member = Member(user.id, user.name, user.mention, user.created_at, user.avatar_url)
+        return self.api.post('users', json=member.__dict__())
 
     def getValidValue(value):
         typeValue = type(value)
@@ -47,9 +48,9 @@ class reverseClient:
             return None
         return value
 
-    def findChannel(ctx, categoryName):
+    async def findChannel(self, channels, categoryName):
         try:
-            for channel in ctx.message.server.channels:
+            for channel in channels:
                 if channel.type == discord.ChannelType.category and categoryName.lower() == channel.name.lower():
                     return channel
             raise discord.client.NotFound

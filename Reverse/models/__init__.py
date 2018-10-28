@@ -1,4 +1,4 @@
 
 
-from .server import server
-from .member import member
+from .server import Server
+from .member import Member

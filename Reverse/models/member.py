@@ -1,5 +1,5 @@
 
-class member:
+class Member:
 
     __slots__ = ['id', 'name', 'mention', 'created_at', 'avatar_url']
 

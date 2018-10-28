@@ -1,6 +1,6 @@
 import json
 
-class server:
+class Server:
 
     __slots__ = ['id', 'name', 'region', 'icon', 'large', 'unavailable', 'created_at', 'member_count', 'splash_url', 'icon_url']
 

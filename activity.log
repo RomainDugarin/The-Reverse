@@ -6356,3 +6356,627 @@ SystemExit: 0
 2018-10-28 14:28:00,068 :: INFO :: Unhandled event WEBHOOKS_UPDATE
 2018-10-28 14:30:51,631 :: INFO :: Unhandled event WEBHOOKS_UPDATE
 2018-10-28 14:31:29,262 :: INFO :: Unhandled event WEBHOOKS_UPDATE
+2018-10-28 14:40:41,597 :: INFO :: Unhandled event WEBHOOKS_UPDATE
+2018-10-28 14:40:43,423 :: INFO :: Unhandled event WEBHOOKS_UPDATE
+2018-10-28 15:07:19,582 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 107, in r
+    async def r():
+SystemExit: 0
+2018-10-28 15:07:20,340 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:07:20,341 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:07:20,341 :: INFO :: logging in using static token
+2018-10-28 15:07:21,868 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:07:21,869 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:08:46,391 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 108, in r
+SystemExit: 0
+2018-10-28 15:08:47,067 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:08:47,067 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:08:47,067 :: INFO :: logging in using static token
+2018-10-28 15:08:48,628 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:08:48,630 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:09:42,851 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:09:43,546 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:09:43,547 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:09:43,547 :: INFO :: logging in using static token
+2018-10-28 15:09:45,019 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:09:45,029 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:10:22,078 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:10:22,790 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:10:22,790 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:10:22,791 :: INFO :: logging in using static token
+2018-10-28 15:10:24,361 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:10:24,364 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:12:37,877 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:12:38,547 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:12:38,548 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:12:38,548 :: INFO :: logging in using static token
+2018-10-28 15:12:40,526 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:12:40,529 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:13:00,806 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:13:01,503 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:13:01,505 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:13:01,506 :: INFO :: logging in using static token
+2018-10-28 15:13:03,292 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:13:03,296 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:13:36,389 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:13:37,053 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:13:37,055 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:13:37,055 :: INFO :: logging in using static token
+2018-10-28 15:13:38,538 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:13:38,539 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:14:12,251 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:14:12,945 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:14:12,945 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:14:12,946 :: INFO :: logging in using static token
+2018-10-28 15:14:14,004 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:14:14,006 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:14:58,463 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:14:59,266 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:14:59,267 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:14:59,268 :: INFO :: logging in using static token
+2018-10-28 15:15:00,535 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:15:00,543 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:15:11,808 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:15:12,469 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:15:12,470 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:15:12,470 :: INFO :: logging in using static token
+2018-10-28 15:15:13,800 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:15:13,801 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:15:57,462 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:15:58,276 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:15:58,276 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:15:58,277 :: INFO :: logging in using static token
+2018-10-28 15:15:59,957 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:15:59,958 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:16:46,053 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:16:46,953 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:16:46,955 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:16:46,957 :: INFO :: logging in using static token
+2018-10-28 15:16:48,700 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:16:48,707 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:17:41,044 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:17:41,742 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:17:41,742 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:17:41,743 :: INFO :: logging in using static token
+2018-10-28 15:17:43,006 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:17:43,013 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:18:19,024 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:18:19,736 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:18:19,741 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:18:19,744 :: INFO :: logging in using static token
+2018-10-28 15:18:21,047 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:18:21,049 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:18:31,559 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:18:32,363 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:18:32,365 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:18:32,365 :: INFO :: logging in using static token
+2018-10-28 15:18:33,817 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:18:33,821 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:18:48,391 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:18:49,136 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:18:49,136 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:18:49,137 :: INFO :: logging in using static token
+2018-10-28 15:18:50,533 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:18:50,534 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:19:07,669 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:19:08,424 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:19:08,425 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:19:08,425 :: INFO :: logging in using static token
+2018-10-28 15:19:09,747 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:19:09,748 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:20:44,943 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:20:45,559 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:20:45,560 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:20:45,560 :: INFO :: logging in using static token
+2018-10-28 15:20:46,478 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:20:46,479 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:21:04,921 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:21:05,562 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:21:05,562 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:21:05,563 :: INFO :: logging in using static token
+2018-10-28 15:21:07,229 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:21:07,231 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:22:42,339 :: ERROR :: Task exception was never retrieved
+future: <Task finished coro=<Client._run_event() done, defined at D:\Program Files\Python 3.6\lib\site-packages\discord\client.py:305> exception=SystemExit(0,)>
+Traceback (most recent call last):
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 520, in run
+    self.loop.run_until_complete(self.start(*args, **kwargs))
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "D:\Program Files\Python 3.6\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "D:\Program Files\Python 3.6\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "D:\Program Files\Python 3.6\lib\site-packages\discord\client.py", line 308, in _run_event
+    yield from getattr(self, event)(*args, **kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 857, in on_message
+    yield from self.process_commands(message)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\bot.py", line 846, in process_commands
+    yield from command.invoke(ctx)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 374, in invoke
+    yield from injected(*ctx.args, **ctx.kwargs)
+  File "D:\FiftyTwo\Depoterie\The Reverse\lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "main.py", line 106, in r
+    sys.exit(0)
+SystemExit: 0
+2018-10-28 15:22:42,928 :: INFO :: on_ready has successfully been registered as an event
+2018-10-28 15:22:42,928 :: INFO :: on_reaction_add has successfully been registered as an event
+2018-10-28 15:22:42,929 :: INFO :: logging in using static token
+2018-10-28 15:22:43,884 :: INFO :: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6
+2018-10-28 15:22:43,885 :: INFO :: sent the identify payload to create the websocket
+2018-10-28 15:23:36,666 :: INFO :: Unhandled event WEBHOOKS_UPDATE
+2018-10-28 15:27:55,749 :: INFO :: Unhandled event WEBHOOKS_UPDATE
+2018-10-28 15:27:57,665 :: INFO :: Unhandled event WEBHOOKS_UPDATE
