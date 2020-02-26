@@ -16,7 +16,7 @@ cd /the-reverse
 git clone git@github.com:AlphaCodeCorp/The-Reverse.git
 ```
 
-Ensuite, créez votre environnement virtuel. Celle-ci permettra de vous aidez à garder Armageddon isolé du reste de votre système.
+Ensuite, créez votre environnement virtuel. Celle-ci permettra de vous aidez à garder The-Reverse isolé du reste de votre système.
 Si vous utilisez VS Code, celui-ci devrait automatiquement détecté sa création et vous la proposer.
 
 ```bash
