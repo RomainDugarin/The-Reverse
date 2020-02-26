@@ -49,8 +49,9 @@ env.bak/
 venv.bak/
 
 # VS Code
-
+.vscode/
 
 # Reverse
 etc/backend.json
 etc/
+run.py
