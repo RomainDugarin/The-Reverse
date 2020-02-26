@@ -54,3 +54,4 @@ venv.bak/
 # Reverse
 etc/backend.json
 etc/
+run.ps1
