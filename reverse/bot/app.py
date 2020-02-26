@@ -1,8 +1,18 @@
-import discord
+from reverse.client.reverse import Reverse
 
 
-client = discord.Client(description="The Reverse", command_prefix="-", pm_help = False)
+class Bot(Reverse):
+    
+    def __init__(self, **kwargs):
+        super().__init__(kwargs=kwargs)
+        self.registerEvents()
 
-@client.event
-async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+    def registerEvents(self):
+        self.getClient().event(self.on_ready)
+        self.getClient().event(self.on_message)
+
+    async def on_ready(self):
+        print('We have logged in as {0.user} using Bot implementation'.format(self.getClient()))
+    
+    def run(self, token: str):
+        super().run(token=token)
