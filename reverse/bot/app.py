@@ -9,15 +9,15 @@ class Bot(Reverse):
 
     def registerEvents(self):
         self.getClient().event(self.on_ready)
-        #self.getClient().event(self.on_message)
-        self.addCommand(self.ping, pass_context=True)
+        self.getClient().event(self.on_message)
+        self.addCommand(self.hey, pass_context=True)
 
     async def on_ready(self, ctx=None):
         print('We have logged in as {0.user} using Bot implementation'.format(self.getClient()))
 
-    async def ping(self, ctx: Context):
+    async def hey(self, ctx: Context):
         ctx = Context(ctx)
-        await ctx.send("Hello")
+        await ctx.send("Hello!")
     
     def run(self, token: str):
         super().run(token=token)

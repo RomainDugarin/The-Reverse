@@ -6,9 +6,8 @@ class DefaultCog(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def pingo(self, ctx):
-        print('Pong!')
-        await ctx.send('Hello')
+    async def ping(self, ctx):
+        await ctx.send('Pong!')
 
 def setup(bot):
     bot.add_cog(DefaultCog(bot))
