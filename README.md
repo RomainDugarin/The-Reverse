@@ -26,7 +26,7 @@ cd env/Scripts
 activate.bat
 ```
 
-Une fois, ceci fait vérifier que vous vous trouviez bien dans l'environnement virtuel puis installer Armageddon Orchestra
+Une fois, ceci fait vérifier que vous vous trouviez bien dans l'environnement virtuel puis installer The-Reverse
 
 ```bash
 python setup.py develop
