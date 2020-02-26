@@ -1,3 +1,4 @@
 __import__('pkg_resources').declare_namespace(__name__)
 
 from .reverse import Reverse
+from .default import DefaultCog
