@@ -10,7 +10,7 @@ class Reverse():
 		self.client = Server(commands.Bot(command_prefix=command_prefix, description=description, kwargs=kwargs))
 		self.instance = self.getClient()
 		self.cogs = []
-		self.linkCogs(['reverse.client.default'])
+		self.linkCogs(['reverse.client.default', 'reverse.client.debugger'])
 
 	def run(self, token: str):
 		if(token is None):
