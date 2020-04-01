@@ -50,7 +50,7 @@ class DefaultCog(commands.Cog):
 					try:
 						msg = await channel.fetch_message(int(path_message[3]))
 						await msg.delete()
-					except :
+					except:
 						print("could find message")
 		
 	async def specifiedRole(self, name: str, guild: list, author: list, attr: str = "name", ctx = None):
