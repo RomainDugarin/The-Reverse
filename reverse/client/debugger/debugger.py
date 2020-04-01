@@ -1,11 +1,11 @@
-from discord.ext import commands
+from discord.ext import commands, tasks
 import asyncio
 from urllib import parse
 from discord import Embed
 
-from reverse.core._service import SqliteService
+from reverse.core._service import SqliteService, TaskService, loop
+from reverse.core._models import Context
 from reverse.core import utils
-
 
 class Debugger(commands.Cog):
 	
@@ -15,9 +15,8 @@ class Debugger(commands.Cog):
 			self.config = utils.load_custom_config('config.json', __file__, path='')
 		except:
 			self.config = None
+		self.task = TaskService('Debugger')
 		
-		
-
 	@commands.command()
 	async def debugdb(self, ctx):
 		print('{} asked for debug info on database'.format(ctx.author.name))
@@ -51,8 +50,43 @@ class Debugger(commands.Cog):
 				else:
 					embed.add_field(name=modifier, value=time.time(), inline=False)
 				await self.lastEmbed.edit(embed = embed)
+	
+	@commands.command()
+	async def debugloop(self, ctx, *args):
+		_kwargs, _args = utils.parse_args(args)
+		data = {
+			"index": 0,
+			"loop": 5 
+		}
+		try:
+			data["loop"] = _kwargs["loop"]
+		except:
+			pass
+		_loop = self.task.createLoop(self.loop_for_debug, seconds=1.0, count=data["loop"], ctx=Context(ctx), data=data)
+		self._debugloop = _loop
+		_loop.start(ctx=_loop.ctx, data=_loop.data)
+	
+	async def testloop(self, ctx):
+		await ctx.send(self._debugloop.data)
 
+	async def loop_for_debug(self, **kwargs):
+		print(kwargs['data']['index'])
+		print(kwargs['ctx'].author)
+		kwargs['data']['index'] += 1
+		await self.testloop(kwargs['ctx'])
+		print("hi loop")
 
+	@commands.command()
+	async def testargs(self, ctx, *args):
+		_kwargs, _args = utils.parse_args(args)
+		embed=Embed(title="Debugger args parser", color=0xe80005)
+		embed.set_author(name="The reverse")
+		embed.add_field(name="command", value=args, inline=False)
+		embed.add_field(name="args", value=_args, inline=False)
+		embed.add_field(name="kwargs", value=_kwargs, inline=False)
+		embed.set_footer(text="Asked by {}".format(ctx.author.name))
+		message = await ctx.send(embed=embed)
+		self.lastEmbed = message
 
 def setup(bot):
 	bot.add_cog(Debugger(bot))
