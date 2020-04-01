@@ -45,3 +45,37 @@ def _load_logger(name, JSON=False, toArray=True):
 def load_backend():
     """ Open backend configuration file and return the corresponding JSON object. """
     return _load_config("env.json")
+
+def parse_args(args, modifier='--'):
+	""" Parse a list of arguments """
+	_kwargs = {}
+	_args = []
+	for index, value in enumerate(args):
+		if modifier in value:
+			try:
+				_kwargs[value[len(modifier):]] = args[index+1]
+			except:
+				pass
+		elif args[index-1][len(modifier):] not in _kwargs.keys():
+			_args.append(value)
+		else:
+			continue
+	return (_kwargs, _args)
+
+def isListContains(self, lesser: list, bigger: list):
+		"""Check if bigger contains all elements in lesser"""
+		return all(elem in lesser for elem in bigger)
+
+
+def isNameInList(self, name: str, array: list, attr: str = "name"):
+	"""Look for string in list of object on specific attribute
+
+	Keyword arguments:
+	name 	-- String to find
+	array 	-- List of Object
+	attr 	-- Attribute to check in the Object
+	"""
+	for role in array:
+		if(name == getattr(role, attr)):
+			return True
+	return False
