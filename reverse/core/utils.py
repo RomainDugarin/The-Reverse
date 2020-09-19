@@ -1,6 +1,7 @@
 import json
 import os
 from functools import partial
+from discord import Embed
 
 utils_open = partial(open, encoding="UTF-8")
 
@@ -79,3 +80,16 @@ def isNameInList(self, name: str, array: list, attr: str = "name"):
 		if(name == getattr(role, attr)):
 			return True
 	return False
+
+def listCogs(filterIn: dict= {'on'}) -> dict:
+    with open('cogs.json', 'r') as cogsList:
+        data = json.load(cogsList)
+    return dict(filter(lambda elem: elem[1] in filterIn, data.items()))
+
+def formatEmbed(title: str, author: str, **kwargs):
+    embed=Embed(title=title, color=0xe80005)
+    embed.set_author(name=author)
+    for name, value in kwargs.items():
+        embed.add_field(name=name, value=value, inline=False)
+    embed.set_footer(text="Asked by {}".format(author))
+    return embed

@@ -56,25 +56,31 @@ class Debugger(commands.Cog):
 		_kwargs, _args = utils.parse_args(args)
 		data = {
 			"index": 0,
-			"loop": 5 
+			"loop": 5,
+			"seconds":0,
+			"minutes":0,
+			"hours":0,
+			"message": ""
 		}
 		try:
-			data["loop"] = _kwargs["loop"]
+			for index, value in _kwargs.items():
+				data[index] = value
 		except:
 			pass
-		_loop = self.task.createLoop(self.loop_for_debug, seconds=1.0, count=data["loop"], ctx=Context(ctx), data=data)
+		print(data)
+		_loop = self.task.createLoop(self.loop_for_debug, seconds=float(data["seconds"]), minutes=float(data["minutes"]), hours=float(data["hours"]), count=int(data["loop"]), ctx=Context(ctx), data=data)
 		self._debugloop = _loop
 		_loop.start(ctx=_loop.ctx, data=_loop.data)
 	
-	async def testloop(self, ctx):
-		await ctx.send(self._debugloop.data)
+	async def testloop(self, ctx, message):
+		await ctx.send(message)
 
 	async def loop_for_debug(self, **kwargs):
-		print(kwargs['data']['index'])
-		print(kwargs['ctx'].author)
-		kwargs['data']['index'] += 1
-		await self.testloop(kwargs['ctx'])
-		print("hi loop")
+		data = kwargs['data']
+		ctx = kwargs['ctx']
+
+		data['index'] += 1
+		await self.testloop(ctx, data['message'])
 
 	@commands.command()
 	async def testargs(self, ctx, *args):

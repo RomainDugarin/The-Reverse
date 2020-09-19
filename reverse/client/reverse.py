@@ -1,18 +1,24 @@
 from discord.ext import commands
 from reverse.core._models import Server, Message, Context
+from reverse.core import utils
 
 
 class Reverse():
-	
+
 	def __init__(self, command_prefix, description=None, **kwargs):
-		kwargs=kwargs['kwargs']
 		print('Reverse : {}'.format(kwargs))
 		self.client = Server(commands.Bot(command_prefix=command_prefix, description=description, kwargs=kwargs))
 		self.instance = self.getClient()
 		self.cogs = []
-		self.linkCogs(['reverse.client.default', 'reverse.client.debugger.debugger'])
+		self.defaultCogs = ['reverse.client.default', 'reverse.client.debugger.debugger']
+		self.toLoadCogs = utils.listCogs().keys()
+		if(self.toLoadCogs):
+			self.linkCogs(self.toLoadCogs)
+		else:
+			self.linkCogs(self.defaultCogs)
+		
 
-	def run(self, token: str):
+	def run(self, token: str, cogs: list=[]):
 		if(token is None):
 			raise ValueError('Token can\t be empty.')
 		if(not isinstance(token, str)):
@@ -55,3 +61,6 @@ class Reverse():
 		m = Message(message)
 		print('We have detected a message from {0.author} saying {0.content}'.format(m.getData()))
 		await self.getClient().process_commands(message)
+	
+	async def on_disconnect(self):
+		print("Restart")

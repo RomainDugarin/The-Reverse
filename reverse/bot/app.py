@@ -1,11 +1,18 @@
 from reverse.client.reverse import Reverse
 from reverse.core._models import Server, Message, Context
+from reverse.core import utils
 import asyncio
 
 class Bot(Reverse):
     
+    def __new__(cls, command_prefix, description=None, **kwargs):
+        return super(Bot, cls).__new__(cls)
+
     def __init__(self, command_prefix, description=None, **kwargs):
-        super().__init__(command_prefix=command_prefix, description=description, kwargs=kwargs)
+        super().__init__(command_prefix, description, **kwargs)
+        self.prefix = command_prefix
+        self.description = description
+        self.initKwargs = kwargs
         self.registerEvents()
         self.isShutingdown = False
 
@@ -33,11 +40,29 @@ class Bot(Reverse):
         super().run(token=token)
         print("{} successfully".format(status))
     
-    async def reload(self, ctx, time: int = 0):
+    async def isShutingdown(self):
+        return self.isShutingdown
+    
+    async def reload(self, ctx, *args):
         ctx = Context(ctx)
-        self.isShutingdown = True
+        _kwargs, _args = utils.parse_args(args)
+        data = {}
+        if('time' in _kwargs):
+            time = int(_kwargs['time'])
+        else:
+            time = 0
+        
+        import json
+        for cog in self.cogs:
+            data[cog] = 'on'
+        with open('cogs.json', 'w') as outfile:
+            json.dump({**data, **_kwargs}, outfile)
+
         if(time > 0):
-            await ctx.send("Reload in {} seconds".format(time))
+            await ctx.send(embed=utils.formatEmbed("Reload in {} seconds".format(time), ctx.author.name, **{**data, **_kwargs}))
             await asyncio.sleep(time)
-        await ctx.send("Reloading now")
-        await self.getClient().logout()
+        self.isShutingdown = True
+        import sys
+        sys.tracebacklimit = 0
+        raise SystemExit('Restarting The-Reverse')
+        
