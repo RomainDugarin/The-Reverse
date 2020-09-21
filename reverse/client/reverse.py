@@ -1,6 +1,7 @@
 from discord.ext import commands
 from reverse.core._models import Server, Message, Context
 from reverse.core import utils
+import random
 
 
 class Reverse():
@@ -60,6 +61,8 @@ class Reverse():
 	async def on_message(self, message):
 		m = Message(message)
 		print('We have detected a message from {0.author} saying {0.content}'.format(m.getData()))
+		if(self.instance.user.mentioned_in(message) and random.randint(1,3) == 1):
+			await message.channel.send("Yo! Shut up, stupid Hobbit! Don't @ me. Dipshit.")
 		await self.getClient().process_commands(message)
 	
 	async def on_disconnect(self):
