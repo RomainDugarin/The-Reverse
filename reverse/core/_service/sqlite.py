@@ -1,4 +1,5 @@
 import sqlite3
+import json
 from reverse.core import utils
 
 class SqliteService:
@@ -12,11 +13,65 @@ class SqliteService:
     ]
 
     def __init__(self, dbname = None, dbpath = None):
+        """Initialize SQLITE service
+
+        Args:
+            dbname (str, optional): Database name. Defaults to None.
+            dbpath (str, optional): Database path. Defaults to None.
+        """
         self.env = self.getEnvSqlite()
         self.name = self.env['dbname']
         self.dbpath = self.env['dbpath']
         self.dbfullpath = '{}{}'.format(self.dbpath, self.name)
         self.instance = sqlite3.connect(self.dbfullpath)
+
+    def _execute(self, operation: str, parameters = []):
+        cursor = self.instance.execute(operation, parameters)
+        return cursor
+
+    def _commit(self):
+        self.instance.commit()
+    
+    def _fetchAll(self, cursor):
+        records = cursor.fetchall()
+        return records
+
+    def createTable(self, tableName: str, configuration: str):
+        """Create sqlite Table if it doesn't already exists
+
+        Args:
+            tableName (str): Table name
+            configuration (str): Columns and the type of data
+        """
+        sql = "CREATE TABLE IF NOT EXISTS {} ({})".format(tableName, configuration)
+        self._execute(sql)
+
+    def listTable(self):
+        sql = "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"
+        cursor = self._execute(sql)
+        return cursor
+    
+    def _escape(self, string: str) -> str:
+        return json.dumps(string)
+    
+    def _joinList(self, col: list) -> list:
+        for i, v in enumerate(col):
+            col[i] = json.dumps(v)
+        return col
+
+
+    def insertion(self, table: str, columns: list, insertValues: list, ignore: bool = True):
+        if(ignore):
+            sql_pre = "INSERT OR IGNORE INTO"
+        else:
+            sql_pre = "INSERT INTO"
+        _columns = ", ".join(self._joinList(columns))
+        _values = ", ".join(self._joinList(insertValues))
+        sql = "{} {} ({}) VALUES ({})".format(sql_pre, table, _columns, _values)
+        print(sql + _columns + _values)
+        cursor = self._execute(sql)
+        self._commit()
+        return cursor
 
     def getEnvSqlite(self):
         return utils.load_backend()['sqlite']
