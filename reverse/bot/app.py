@@ -2,6 +2,7 @@ from reverse.client.reverse import Reverse
 from reverse.core._models import Server, Message, Context
 from reverse.core import utils
 import asyncio
+import sys
 
 class Bot(Reverse):
     
@@ -10,6 +11,7 @@ class Bot(Reverse):
 
     def __init__(self, command_prefix, description=None, **kwargs):
         super().__init__(command_prefix, description, **kwargs)
+        sys.tracebacklimit = 1
         self.prefix = command_prefix
         self.description = description
         self.initKwargs = kwargs
@@ -62,7 +64,6 @@ class Bot(Reverse):
             await ctx.send(embed=utils.formatEmbed("Reload in {} seconds".format(time), ctx.author.name, **{**data, **_kwargs}))
             await asyncio.sleep(time)
         self.isShutingdown = True
-        import sys
         sys.tracebacklimit = 0
         raise SystemExit('Restarting The-Reverse')
         
