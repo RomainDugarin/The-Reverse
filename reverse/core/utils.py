@@ -27,7 +27,6 @@ def _create_folder(folder):
     jsonf = os.path.realpath(os.path.join(cwfd, '_env', folder))
     pathlib.Path(jsonf).mkdir(parents=True, exist_ok=True)
 
-
 def _load_logger(name, JSON=False, toArray=True):
     """Open file and return a corresponding file object or JSON.
 
@@ -66,7 +65,6 @@ def parse_args(args, modifier='--'):
 def isListContains(self, lesser: list, bigger: list):
 		"""Check if bigger contains all elements in lesser"""
 		return all(elem in lesser for elem in bigger)
-
 
 def isNameInList(self, name: str, array: list, attr: str = "name"):
 	"""Look for string in list of object on specific attribute

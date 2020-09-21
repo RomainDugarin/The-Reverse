@@ -21,7 +21,6 @@ class TaskService:
 		return Loop(func, seconds=seconds, minutes=minutes, hours=hours, count=count, reconnect=reconnect, loop=loop, ctx=ctx, data=data)
 		# return tasks.Loop(func, seconds=seconds, minutes=minutes, hours=hours, count=count, reconnect=reconnect, loop=loop)
 		
-
 	def storeField(self, loop):
 		self.fields.append(loop)
 		return Loop
