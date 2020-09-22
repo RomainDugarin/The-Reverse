@@ -50,6 +50,12 @@ class SqliteService:
         sql = "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"
         cursor = self._execute(sql)
         return cursor
+
+    def isTableExist(self, name: str):
+        record = self._fetchAll(self.listTable())
+        if(name in record):
+            return True
+        return False
     
     def _escape(self, string: str) -> str:
         return json.dumps(string)
