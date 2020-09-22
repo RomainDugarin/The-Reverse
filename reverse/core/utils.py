@@ -1,7 +1,8 @@
 import json
 import os
 from functools import partial
-from discord import Embed
+from discord import Embed, Guild, utils
+from reverse.core._models import Role
 
 utils_open = partial(open, encoding="UTF-8")
 
@@ -91,3 +92,6 @@ def formatEmbed(title: str, author: str, **kwargs):
         embed.add_field(name=name, value=value, inline=False)
     embed.set_footer(text="Asked by {}".format(author))
     return embed
+
+def getRole(role: int, guild: Guild):
+    return Role(role, guild)

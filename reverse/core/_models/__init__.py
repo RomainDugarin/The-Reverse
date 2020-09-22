@@ -4,3 +4,4 @@ from .server import Server
 from .message import Message
 from .context import Context
 from .loop import Loop
+from .role import Role
