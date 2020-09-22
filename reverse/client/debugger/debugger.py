@@ -4,7 +4,7 @@ from urllib import parse
 from discord import Embed
 
 from reverse.core._service import SqliteService, TaskService, loop
-from reverse.core._models import Context
+from reverse.core._models import Context, Role
 from reverse.core import utils
 
 class Debugger(commands.Cog):
@@ -93,6 +93,29 @@ class Debugger(commands.Cog):
 		embed.set_footer(text="Asked by {}".format(ctx.author.name))
 		message = await ctx.send(embed=embed)
 		self.lastEmbed = message
+
+	@commands.command()
+	async def debugRole(self, ctx, *args):
+		ctx = Context(ctx)
+		guild = ctx.guild
+		_kwargs, _args = utils.parse_args(args)
+		if("role" in _kwargs.keys()):
+			try:
+				r_id = int(_kwargs["role"][3:-1])
+			except:
+				await ctx.send("404 - Role not found")
+				return
+			if( (r := Role(r_id, guild)) != None): 
+				await ctx.send("Find role with id={} and name={} ({} - {})".format(r.id, r.name, r, r.role))
+			else:
+				await ctx.send("404 - Role not found")
+			return
+		await ctx.send("You need to specify a role. --role @x")
+	
+	@commands.command()
+	async def tenstop(self, ctx):
+		await asyncio.sleep(10)
+		await ctx.send("End tenstop")
 
 def setup(bot):
 	bot.add_cog(Debugger(bot))
