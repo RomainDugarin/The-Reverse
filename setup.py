@@ -1,8 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from pkg_resources import parse_requirements
 
 setup_requires = [
-    'setuptools>=45.2'
+    'setuptools>=45.2',
+    'discord.py'
 ]
 
 with open('requirements.txt') as f:
@@ -14,8 +15,7 @@ setup(name="The-Reverse",
     url="https://github.com/AlphaCodeCorp/The-Reverse",
     author="AlphaCode",
     author_email="incisiflefufu@gmail.com",
-    packages=['reverse', 'reverse.bot', 'reverse.client'],
-    namespace_packages=['reverse', 'reverse.bot', 'reverse.client'],
+    packages=find_packages(),
     include_package_data=True,
     setup_requires = setup_requires,
     install_requires = install_requires,
