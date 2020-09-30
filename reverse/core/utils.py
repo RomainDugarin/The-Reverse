@@ -1,5 +1,7 @@
 import json
 import os
+import datetime
+import asyncio
 from functools import partial
 from discord import Embed, Guild, utils
 from reverse.core._models import Role
@@ -95,3 +97,27 @@ def formatEmbed(title: str, author: str, **kwargs):
 
 def getRole(role: int, guild: Guild):
     return Role(role, guild)
+
+def now():
+    return datetime.datetime.now(datetime.timezone.utc)
+
+def time_until(when):
+    """A helper that give delta from specified time
+
+    Parameters
+    -----------
+        when: :class:`datetime.datetime`
+    """
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=datetime.timezone.utc)
+    now = datetime.datetime.now(datetime.timezone.utc)
+    delta = (when - now).total_seconds()
+
+    return delta
+
+t = time_until(datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(seconds=5))
+print(t)
+t = now().replace(hour=0, minute=0, second=0) + datetime.timedelta(days=1)
+print(t)
+t = t.replace(hour=0, minute=0, second=0)
+print(t)
