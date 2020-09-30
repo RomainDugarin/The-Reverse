@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reverse.client package &#8212; The Reverse 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="reverse-client-package">
+<h1>reverse.client package<a class="headerlink" href="#reverse-client-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reverse.client.debugger.html">reverse.client.debugger package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reverse.client.debugger.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reverse.client.debugger.html#module-reverse.client.debugger.debugger">reverse.client.debugger.debugger module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reverse.client.debugger.html#module-reverse.client.debugger">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-reverse.client.default">
+<span id="reverse-client-default-module"></span><h2>reverse.client.default module<a class="headerlink" href="#module-reverse.client.default" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="reverse.client.default.DefaultCog">
+<em class="property">class </em><code class="sig-prename descclassname">reverse.client.default.</code><code class="sig-name descname">DefaultCog</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.default.DefaultCog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">discord.ext.commands.cog.Cog</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s description, typically the cleaned docstring.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">qualified_name</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s specified name, not the class name.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check()</span></code> check.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check_once</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check_once()</span></code> check.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.default.DefaultCog.clear" title="reverse.client.default.DefaultCog.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_after_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local post-invoke hook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_before_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local pre-invoke hook.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-func docutils literal notranslate"><span class="pre">commands.check()</span></code> for every command and subcommand in this cog.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_command_error</span></code>(ctx, error)</p></td>
+<td><p>A special method that is called whenever an error is dispatched inside this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_unload</span></code>()</p></td>
+<td><p>A special method that is called when the cog gets removed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.default.DefaultCog.delete" title="reverse.client.default.DefaultCog.delete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_commands</span></code>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_listeners</span></code>()</p></td>
+<td><p>Returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of (name, function) listener pairs that are defined in this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.default.DefaultCog.isListContains" title="reverse.client.default.DefaultCog.isListContains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isListContains</span></code></a>(lesser, bigger)</p></td>
+<td><p>Check if bigger contains all elements in lesser</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.default.DefaultCog.isNameInList" title="reverse.client.default.DefaultCog.isNameInList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isNameInList</span></code></a>(name, array[, attr])</p></td>
+<td><p>Look for string in list of object on specific attribute</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">listener</span></code>([name])</p></td>
+<td><p>A decorator that marks a function as a listener.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.default.DefaultCog.ping" title="reverse.client.default.DefaultCog.ping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ping</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">walk_commands</span></code>()</p></td>
+<td><p>An iterator that recursively walks through this cog’s commands and subcommands.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>specifiedRole</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt id="reverse.client.default.DefaultCog.clear">
+<code class="sig-name descname">clear</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.default.DefaultCog.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.default.DefaultCog.delete">
+<code class="sig-name descname">delete</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.default.DefaultCog.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.default.DefaultCog.isListContains">
+<code class="sig-name descname">isListContains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lesser</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">bigger</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.default.DefaultCog.isListContains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if bigger contains all elements in lesser</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.default.DefaultCog.isNameInList">
+<code class="sig-name descname">isNameInList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">array</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">attr</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'name'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.default.DefaultCog.isNameInList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look for string in list of object on specific attribute</p>
+<p>Keyword arguments:
+name    – String to find
+array   – List of Object
+attr    – Attribute to check in the Object</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.default.DefaultCog.ping">
+<code class="sig-name descname">ping</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.default.DefaultCog.ping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.default.DefaultCog.specifiedRole">
+<em class="property">async </em><code class="sig-name descname">specifiedRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">guild</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">author</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">attr</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'name'</span></em>, <em class="sig-param"><span class="n">ctx</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.default.DefaultCog.specifiedRole" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="reverse.client.default.setup">
+<code class="sig-prename descclassname">reverse.client.default.</code><code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.default.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-reverse.client.missy">
+<span id="reverse-client-missy-module"></span><h2>reverse.client.missy module<a class="headerlink" href="#module-reverse.client.missy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="reverse.client.missy.Missy">
+<em class="property">class </em><code class="sig-prename descclassname">reverse.client.missy.</code><code class="sig-name descname">Missy</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.missy.Missy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">discord.ext.commands.cog.Cog</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s description, typically the cleaned docstring.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">qualified_name</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s specified name, not the class name.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check()</span></code> check.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check_once</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check_once()</span></code> check.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_after_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local post-invoke hook.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_before_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local pre-invoke hook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-func docutils literal notranslate"><span class="pre">commands.check()</span></code> for every command and subcommand in this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_command_error</span></code>(ctx, error)</p></td>
+<td><p>A special method that is called whenever an error is dispatched inside this cog.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_unload</span></code>()</p></td>
+<td><p>A special method that is called when the cog gets removed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.missy.Missy.debugInsertAllMembers" title="reverse.client.missy.Missy.debugInsertAllMembers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debugInsertAllMembers</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.missy.Missy.debugSQL" title="reverse.client.missy.Missy.debugSQL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debugSQL</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_commands</span></code>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_listeners</span></code>()</p></td>
+<td><p>Returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of (name, function) listener pairs that are defined in this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.missy.Missy.initServerEvent" title="reverse.client.missy.Missy.initServerEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initServerEvent</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">listener</span></code>([name])</p></td>
+<td><p>A decorator that marks a function as a listener.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.missy.Missy.members" title="reverse.client.missy.Missy.members"><code class="xref py py-obj docutils literal notranslate"><span class="pre">members</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.missy.Missy.showTable" title="reverse.client.missy.Missy.showTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showTable</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">walk_commands</span></code>()</p></td>
+<td><p>An iterator that recursively walks through this cog’s commands and subcommands.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.missy.Missy.whoismissy" title="reverse.client.missy.Missy.whoismissy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">whoismissy</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>getAllMembers</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>newEvent</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>tableToList</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt id="reverse.client.missy.Missy.debugInsertAllMembers">
+<code class="sig-name descname">debugInsertAllMembers</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.missy.Missy.debugInsertAllMembers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.missy.Missy.debugSQL">
+<code class="sig-name descname">debugSQL</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.missy.Missy.debugSQL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.missy.Missy.getAllMembers">
+<code class="sig-name descname">getAllMembers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guild</span><span class="p">:</span> <span class="n">discord.guild.Guild</span></em>, <em class="sig-param"><span class="n">roleID</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#reverse.client.missy.Missy.getAllMembers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.missy.Missy.initServerEvent">
+<code class="sig-name descname">initServerEvent</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.missy.Missy.initServerEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.missy.Missy.members">
+<code class="sig-name descname">members</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.missy.Missy.members" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.missy.Missy.newEvent">
+<em class="property">async </em><code class="sig-name descname">newEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.missy.Missy.newEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.missy.Missy.showTable">
+<code class="sig-name descname">showTable</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.missy.Missy.showTable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.missy.Missy.tableToList">
+<em class="property">async </em><code class="sig-name descname">tableToList</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#reverse.client.missy.Missy.tableToList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.missy.Missy.whoismissy">
+<code class="sig-name descname">whoismissy</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.missy.Missy.whoismissy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="reverse.client.missy.setup">
+<code class="sig-prename descclassname">reverse.client.missy.</code><code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.missy.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-reverse.client.reverse">
+<span id="reverse-client-reverse-module"></span><h2>reverse.client.reverse module<a class="headerlink" href="#module-reverse.client.reverse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="reverse.client.reverse.Reverse">
+<em class="property">class </em><code class="sig-prename descclassname">reverse.client.reverse.</code><code class="sig-name descname">Reverse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_prefix</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>addCommand</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>createCommand</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>getClient</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>getCommands</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>getLogger</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>linkCogs</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>on_disconnect</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>on_message</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>on_ready</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>run</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.addCommand">
+<code class="sig-name descname">addCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; discord.ext.commands.core.command<a class="headerlink" href="#reverse.client.reverse.Reverse.addCommand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.createCommand">
+<code class="sig-name descname">createCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; discord.ext.commands.core.Command<a class="headerlink" href="#reverse.client.reverse.Reverse.createCommand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.getClient">
+<code class="sig-name descname">getClient</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; discord.ext.commands.bot.Bot<a class="headerlink" href="#reverse.client.reverse.Reverse.getClient" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.getCommands">
+<code class="sig-name descname">getCommands</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &lt;module ‘discord.ext.commands’ from ‘d:\fiftytwo\depoterie\alphacode\the-reverse\.eggs\discord.py-1.4.1-py3.8.egg\discord\ext\commands\__init__.py’&gt;<a class="headerlink" href="#reverse.client.reverse.Reverse.getCommands" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.getLogger">
+<code class="sig-name descname">getLogger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse.getLogger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.linkCogs">
+<code class="sig-name descname">linkCogs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cogs</span><span class="p">:</span> <span class="n">list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse.linkCogs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.on_disconnect">
+<em class="property">async </em><code class="sig-name descname">on_disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse.on_disconnect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.on_message">
+<em class="property">async </em><code class="sig-name descname">on_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse.on_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.on_ready">
+<em class="property">async </em><code class="sig-name descname">on_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse.on_ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.reverse.Reverse.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">cogs</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">[]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.reverse.Reverse.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-reverse.client.series">
+<span id="reverse-client-series-module"></span><h2>reverse.client.series module<a class="headerlink" href="#module-reverse.client.series" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="reverse.client.series.Series">
+<em class="property">class </em><code class="sig-prename descclassname">reverse.client.series.</code><code class="sig-name descname">Series</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.series.Series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">discord.ext.commands.cog.Cog</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s description, typically the cleaned docstring.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">qualified_name</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s specified name, not the class name.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check()</span></code> check.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check_once</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check_once()</span></code> check.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_after_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local post-invoke hook.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_before_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local pre-invoke hook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-func docutils literal notranslate"><span class="pre">commands.check()</span></code> for every command and subcommand in this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_command_error</span></code>(ctx, error)</p></td>
+<td><p>A special method that is called whenever an error is dispatched inside this cog.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_unload</span></code>()</p></td>
+<td><p>A special method that is called when the cog gets removed.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_commands</span></code>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_listeners</span></code>()</p></td>
+<td><p>Returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of (name, function) listener pairs that are defined in this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">listener</span></code>([name])</p></td>
+<td><p>A decorator that marks a function as a listener.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.series.Series.planning_member" title="reverse.client.series.Series.planning_member"><code class="xref py py-obj docutils literal notranslate"><span class="pre">planning_member</span></code></a>()</p></td>
+<td><p>Return dictionnary of released planning of user</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.series.Series.planning_today" title="reverse.client.series.Series.planning_today"><code class="xref py py-obj docutils literal notranslate"><span class="pre">planning_today</span></code></a>(ctx)</p></td>
+<td><p>Send embed listing today release from specified BetaSeries account</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.series.Series.pt" title="reverse.client.series.Series.pt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.series.Series.recreate" title="reverse.client.series.Series.recreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.series.Series.start" title="reverse.client.series.Series.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">walk_commands</span></code>()</p></td>
+<td><p>An iterator that recursively walks through this cog’s commands and subcommands.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="reverse.client.series.Series.planning_member">
+<em class="property">async </em><code class="sig-name descname">planning_member</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.series.Series.planning_member" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dictionnary of released planning of user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.series.Series.planning_today">
+<em class="property">async </em><code class="sig-name descname">planning_today</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.series.Series.planning_today" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send embed listing today release from specified BetaSeries account</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ctx: :class:`reverse.core._models.Context`</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.series.Series.pt">
+<code class="sig-name descname">pt</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.series.Series.pt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.series.Series.recreate">
+<code class="sig-name descname">recreate</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.series.Series.recreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.series.Series.start">
+<code class="sig-name descname">start</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.series.Series.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="reverse.client.series.setup">
+<code class="sig-prename descclassname">reverse.client.series.</code><code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.series.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-reverse.client">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-reverse.client" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">The Reverse</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, AlphaCode.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/reverse.client.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

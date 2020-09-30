@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reverse.client.debugger package &#8212; The Reverse 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="reverse-client-debugger-package">
+<h1>reverse.client.debugger package<a class="headerlink" href="#reverse-client-debugger-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-reverse.client.debugger.debugger">
+<span id="reverse-client-debugger-debugger-module"></span><h2>reverse.client.debugger.debugger module<a class="headerlink" href="#module-reverse.client.debugger.debugger" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="reverse.client.debugger.debugger.Debugger">
+<em class="property">class </em><code class="sig-prename descclassname">reverse.client.debugger.debugger.</code><code class="sig-name descname">Debugger</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">discord.ext.commands.cog.Cog</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s description, typically the cleaned docstring.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">qualified_name</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: Returns the cog’s specified name, not the class name.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check()</span></code> check.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bot_check_once</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-meth docutils literal notranslate"><span class="pre">Bot.check_once()</span></code> check.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_after_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local post-invoke hook.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_before_invoke</span></code>(ctx)</p></td>
+<td><p>A special method that acts as a cog local pre-invoke hook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_check</span></code>(ctx)</p></td>
+<td><p>A special method that registers as a <code class="xref py py-func docutils literal notranslate"><span class="pre">commands.check()</span></code> for every command and subcommand in this cog.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_command_error</span></code>(ctx, error)</p></td>
+<td><p>A special method that is called whenever an error is dispatched inside this cog.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cog_unload</span></code>()</p></td>
+<td><p>A special method that is called when the cog gets removed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.debugRole" title="reverse.client.debugger.debugger.Debugger.debugRole"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debugRole</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.debugdb" title="reverse.client.debugger.debugger.Debugger.debugdb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debugdb</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.debugloop" title="reverse.client.debugger.debugger.Debugger.debugloop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debugloop</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_commands</span></code>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_listeners</span></code>()</p></td>
+<td><p>Returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code> of (name, function) listener pairs that are defined in this cog.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">listener</span></code>([name])</p></td>
+<td><p>A decorator that marks a function as a listener.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.pm" title="reverse.client.debugger.debugger.Debugger.pm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.tenstop" title="reverse.client.debugger.debugger.Debugger.tenstop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tenstop</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.testargs" title="reverse.client.debugger.debugger.Debugger.testargs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">testargs</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#reverse.client.debugger.debugger.Debugger.updateEmbed" title="reverse.client.debugger.debugger.Debugger.updateEmbed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateEmbed</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">walk_commands</span></code>()</p></td>
+<td><p>An iterator that recursively walks through this cog’s commands and subcommands.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 36%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>loop_for_debug</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>testloop</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.debugRole">
+<code class="sig-name descname">debugRole</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.debugRole" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.debugdb">
+<code class="sig-name descname">debugdb</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.debugdb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.debugloop">
+<code class="sig-name descname">debugloop</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.debugloop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.debugger.debugger.Debugger.loop_for_debug">
+<em class="property">async </em><code class="sig-name descname">loop_for_debug</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.loop_for_debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.pm">
+<code class="sig-name descname">pm</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.pm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.tenstop">
+<code class="sig-name descname">tenstop</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.tenstop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.testargs">
+<code class="sig-name descname">testargs</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.testargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="reverse.client.debugger.debugger.Debugger.testloop">
+<em class="property">async </em><code class="sig-name descname">testloop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.testloop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="reverse.client.debugger.debugger.Debugger.updateEmbed">
+<code class="sig-name descname">updateEmbed</code><em class="property"> = &lt;discord.ext.commands.core.Command object&gt;</em><a class="headerlink" href="#reverse.client.debugger.debugger.Debugger.updateEmbed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="reverse.client.debugger.debugger.setup">
+<code class="sig-prename descclassname">reverse.client.debugger.debugger.</code><code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#reverse.client.debugger.debugger.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-reverse.client.debugger">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-reverse.client.debugger" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">The Reverse</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, AlphaCode.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/reverse.client.debugger.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
