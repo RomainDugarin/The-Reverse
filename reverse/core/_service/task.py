@@ -1,4 +1,4 @@
-import asyncio
+import asyncio, datetime
 
 from reverse.core._models import Loop
 from reverse.core import utils
@@ -16,6 +16,10 @@ class TaskService:
 		self.name = name
 		self.loop = asyncio.get_event_loop()
 		self.fields = []
+
+	def sleep_until(self, when, func):
+		delta = utils.time_until(when)
+		return self.createLoop(func, seconds=delta)
 		
 	def createLoop(self, func, *, seconds=0, minutes=0, hours=0, count=None, reconnect=True, loop=None, ctx=None, data=None):
 		return Loop(func, seconds=seconds, minutes=minutes, hours=hours, count=count, reconnect=reconnect, loop=loop, ctx=ctx, data=data)
