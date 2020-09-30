@@ -30,19 +30,6 @@ class Series(commands.Cog):
 		"""
 		self.b = BetaSeries(token, user)
 
-	async def planning_member(self):
-		"""Return dictionnary of released planning of user
-		"""
-		r = Route('GET', '/planning/member')
-		return await self.b.request(r)
-
-	async def planning_today(self):
-		"""Return dictionnary of planning of today release from specified user
-		"""
-		today = datetime.date.today()
-		r = Route('GET', '/planning/calendar', '&start={start}&end={end}&type={type}', start=today, end=today, type='all')
-		return await self.b.request(r)
-
 	@commands.command()
 	async def start(self, ctx):
 		"""Start coroutine that trigger every day at 7am to display Planning of specified day released
@@ -58,10 +45,11 @@ class Series(commands.Cog):
 		next_call = next_call.replace(hour=7, minute=0, second=0)
 
 		delta = utils.time_until(next_call)
+		data = {}
 		print(delta)
 		
-		_loop = self.task.createLoop(self.at, seconds=delta, count=3, ctx=ctx)
-		_loop.start(ctx=_loop.ctx)
+		_loop = self.task.createLoop(self.release_today, seconds=delta, ctx=ctx, data=data)
+		_loop.start(ctx=_loop.ctx, data=_loop.data)
 
 	@commands.command()
 	async def pt(self, ctx):
@@ -72,15 +60,17 @@ class Series(commands.Cog):
 			ctx: :class:`reverse.core._models.Context`
 		"""
 		Context(ctx)
-		await self.planning_today(ctx)
+		await self.planning_today()
 
-	async def planning_today(self, ctx):
+	async def release_today(self, **kwargs):
 		"""Send embed listing today release from specified BetaSeries account
 
 		Parameters
     	-----------
 			ctx: :class:`reverse.core._models.Context`
 		"""
+		ctx = kwargs['ctx']
+
 		data = await self.planning_today()
 		episodes = data['days'][0]
 
@@ -93,6 +83,19 @@ class Series(commands.Cog):
 		embed.set_footer(text="".format("The Reverse"))
 
 		await ctx.send(embed=embed)
+
+	async def planning_member(self):
+		"""Return dictionnary of released planning of user
+		"""
+		r = Route('GET', '/planning/member')
+		return await self.b.request(r)
+
+	async def planning_today(self):
+		"""Return dictionnary of planning of today release from specified user
+		"""
+		today = datetime.date.today()
+		r = Route('GET', '/planning/calendar', '&start={start}&end={end}&type={type}', start=today, end=today, type='all')
+		return await self.b.request(r)
 
 	
 def setup(bot):
