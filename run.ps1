@@ -1,1 +1,1 @@
-python .\run.py "Insert Token"
+python .\Engine.py "TOKEN" "starting"
