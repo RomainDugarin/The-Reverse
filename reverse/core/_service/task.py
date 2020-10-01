@@ -17,6 +17,25 @@ class TaskService:
 		self.loop = asyncio.get_event_loop()
 		self.fields = []
 
+	def taskList(self):
+		return self.fields
+
+	def remove(self, loop):
+		if(loop in self.fields):
+			self.fields.pop(self.fields.index(loop))
+		return self.fields
+
+	def findTaskByName(self, name):
+		for e in self.fields:
+			if(name == e.getName()):
+				return e
+		return None
+
+	def start(self, loop, *args, **kwargs):
+		loop.start(*args, **kwargs)
+		self.fields.append(loop)
+		return loop
+
 	def sleep_until(self, when, func):
 		delta = utils.time_until(when)
 		return self.createLoop(func, seconds=delta)
