@@ -1,11 +1,26 @@
 from discord.ext import commands
 from discord import Embed
 import datetime
+from functools import wraps
 
 from reverse.core._service.betaseries import *
 from reverse.core._service import TaskService
 from reverse.core._models import Context
 from reverse.core import utils
+
+
+class Worker(object):
+
+	worker = []
+
+	def register():
+		"""A decorator that register method
+		"""
+		def wrapped(f, **kwargs):
+			if(not f in Worker().worker):
+				Worker().worker.append(f)
+			return f
+		return wrapped
 
 
 class Series(commands.Cog):
@@ -14,6 +29,7 @@ class Series(commands.Cog):
 		self.bot = bot
 		self.b = BetaSeries('c62c2adcf1dc', '84998d383001')
 		self.task = TaskService('Series')
+		self.worker = Worker().worker
 		self.LOGO = "https://www.betaseries.com/images/site/betaseries.svg"
 		
 	@commands.command()
@@ -31,7 +47,7 @@ class Series(commands.Cog):
 
 	@commands.command(aliases=['bstart'])
 	async def betastart(self, ctx, *args):
-		"""Start coroutine that trigger every day at 7am to display Planning of specified day released
+		"""Create task that trigger worker at definied date
 
 		Parameters
 		----------
@@ -41,10 +57,13 @@ class Series(commands.Cog):
 		ctx = Context(ctx)
 		_kwargs, _args = utils.parse_args(args)
 		hour = _kwargs.get('hour', 7)
+		DEFAULT_CALL = self.release_today
 
+		# Coroutine next call Datetime
 		next_call = utils.now() + datetime.timedelta(days=1)
 		next_call = next_call.replace(hour=hour, minute=0, second=0)
 
+		# Get delta from now until next_call
 		delta = utils.time_until(next_call)
 		data = {
 			"Hour": 7,
@@ -52,18 +71,30 @@ class Series(commands.Cog):
 			"Date": next_call
 		}
 
-		_task = _kwargs.get("task", self.release_today.__name__)
+		# Store method.__name__
+		_task = _kwargs.get("task", DEFAULT_CALL.__name__)
+		# Check if task is registered
+		if(not any(e.__name__ == _task for e in self.worker)):
+			await ctx.send("This worker is not compatible.")
+			return
+		
 		try:
+			# Test method
 			callable(getattr(Series,_task))
-			if((_loop := self.task.findTaskByName(self.release_today.__name__)) != None):
+			# Try to find if task already running
+			if((_loop := self.task.findTaskByName(_task)) != None):
 				_loop.stop()
 				self.task.remove(_loop)
 				await ctx.send("Overwrite betaseries task.")
-			_loop = self.task.createLoop(self.release_today, seconds=delta, ctx=ctx, data=data)
-			self.task.start(_loop, ctx=_loop.ctx, data=_loop.data)
+			# Store method
+			_task = getattr(self, _task)
+			# Create loop with TaskService
+			_loop = self.task.createLoop(_task, seconds=delta, ctx=ctx, data=data)
+			# Start task
+			self.task.start(_loop, load=_task, ctx=_loop.ctx, data=_loop.data)
 			print("Betaseries task started. Delta : {} - Date : {}".format(delta, next_call))
-		except:
-			await ctx.send("Task unknown.")
+		except Exception as e:
+			print(e)
 
 	@commands.command(aliases=['bstatus'])
 	async def betastatus(self, ctx):
@@ -111,23 +142,29 @@ class Series(commands.Cog):
 		"""Alias for Planning Calendar today
 
 		Parameters
-    	-----------
+		-----------
 			ctx: :class:`reverse.core._models.Context`
 		"""
-		Context(ctx)
-		await self.planning_today()
+		ctx = Context(ctx)
+		await self.release_today(ctx=ctx)
 
+	@commands.command()
+	async def showWorker(self, ctx):
+		await ctx.send("{}".format(self.worker))
+
+	@Worker.register()
 	async def release_today(self, **kwargs) -> None:
 		"""Send embed listing today release from specified BetaSeries account
 
 		Parameters
-    	-----------
+		-----------
 			ctx: :class:`reverse.core._models.Context`
 		"""
 		ctx = kwargs['ctx']
 
 		data = await self.planning_today()
-		episodes = data.get('days', [])
+		episodes = data.get('days', [])[0]
+		print(episodes)
 
 		embed=Embed(title="Sortie du jour", color=0xe80005, timestamp=datetime.datetime.today(), thumbnail=self.LOGO)
 		if(len(episodes) > 0):
@@ -154,6 +191,7 @@ class Series(commands.Cog):
 		today = datetime.date.today()
 		r = Route('GET', '/planning/calendar', '&start={start}&end={end}&type={type}', start=today, end=today, type='all')
 		return await self.b.request(r)
+
 
 	
 def setup(bot):
