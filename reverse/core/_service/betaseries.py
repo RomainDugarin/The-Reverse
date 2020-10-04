@@ -71,6 +71,14 @@ class BetaSeries:
 
 			if(300 > r.status >= 200):
 				return data
+			
+			if(r.status == 400):
+				self.errors(data)
+
+	def errors(self, data):
+		code = data["errors"][0].get("code", 0)
+		text = data["errors"][0].get("text", "...")
+		raise ValueError("{}: {}".format(code, text))
 
 	async def planning_member(self):
 		r = Route('GET', '/planning/member')
