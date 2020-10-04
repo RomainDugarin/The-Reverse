@@ -24,13 +24,18 @@ class Worker(object):
 
 
 class Series(commands.Cog):
+
+	LOGO = "https://www.betaseries.com/images/site/betaseries.svg"
 	
 	def __init__(self, bot):
 		self.bot = bot
-		self.b = BetaSeries('c62c2adcf1dc', '84998d383001')
+		self.env = utils.load_backend().get("betaseries", {})
+		self.token = self.env.get("api_key", None)
+		self.user = self.env.get("user_key", None)
+
+		self.b = BetaSeries(self.token, self.user)
 		self.task = TaskService('Series')
 		self.worker = Worker().worker
-		self.LOGO = "https://www.betaseries.com/images/site/betaseries.svg"
 		
 	@commands.command()
 	async def recreate(self, token, user):
@@ -164,7 +169,6 @@ class Series(commands.Cog):
 
 		data = await self.planning_today()
 		episodes = data.get('days', [])[0]
-		print(episodes)
 
 		embed=Embed(title="Sortie du jour", color=0xe80005, timestamp=datetime.datetime.today(), thumbnail=self.LOGO)
 		if(len(episodes) > 0):
