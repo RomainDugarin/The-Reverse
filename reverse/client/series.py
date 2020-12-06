@@ -168,11 +168,11 @@ class Series(commands.Cog):
 		ctx = kwargs['ctx']
 
 		data = await self.planning_today()
-		episodes = data.get('days', [])[0]
+		episodes = data.get('days', [])
 
 		embed=Embed(title="Sortie du jour", color=0xe80005, timestamp=datetime.datetime.today(), thumbnail=self.LOGO)
 		if(len(episodes) > 0):
-			for e in episodes['events']:
+			for e in episodes[0]['events']:
 				e = e['payload']
 				name = "{} {} — {}".format(e['show_title'], e['code'], e['title'])
 				value = "[Source]({})".format(e['resource_url'])

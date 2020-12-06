@@ -33,23 +33,34 @@ class Debugger(commands.Cog):
 		embed.set_footer(text="Asked by {}".format(ctx.author.name))
 		message = await ctx.send(embed=embed)
 		self.lastEmbed = message
+
+	@commands.command()
+	async def showModules(self, ctx):
+		ctx = Context(ctx)
+		embed=Embed(title="Loaded Modules", color=0xe80005)
+		embed.set_author(name="The reverse")
+		for key, value in utils.listCogs().items():
+			embed.add_field(name=key, value=value, inline=False)
+		embed.set_footer(text="Asked by {}".format(ctx.author.name))
+		message = await ctx.send(embed=embed)
+		self.lastEmbed = message
 	
 	@commands.command()
 	async def updateEmbed(self, ctx):
-			if self.lastEmbed is not None:
-				embed = self.lastEmbed.embeds[0]
-				timestamp = None
-				modifier = "Timestamps"
-				for index, field in enumerate(embed.fields):
-					if modifier == field.name:
-						timestamp = index
-						break
-				import time
-				if timestamp is not None:
-					embed.set_field_at(timestamp, name=modifier, value=time.time())
-				else:
-					embed.add_field(name=modifier, value=time.time(), inline=False)
-				await self.lastEmbed.edit(embed = embed)
+		if self.lastEmbed is not None:
+			embed = self.lastEmbed.embeds[0]
+			timestamp = None
+			modifier = "Timestamps"
+			for index, field in enumerate(embed.fields):
+				if modifier == field.name:
+					timestamp = index
+					break
+			import time
+			if timestamp is not None:
+				embed.set_field_at(timestamp, name=modifier, value=time.time())
+			else:
+				embed.add_field(name=modifier, value=time.time(), inline=False)
+			await self.lastEmbed.edit(embed = embed)
 	
 	@commands.command()
 	async def debugloop(self, ctx, *args):
