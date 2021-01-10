@@ -66,11 +66,6 @@ class DefaultCog(commands.Cog):
 		
 		#TODO : Choisir un meilleur message
 		await ctx.send("Message is {}+1 layers deep.".format(count))
-	
-				if(self.isListContains(checker, path_message[:3])):
-					channel = guild.get_channel(int(path_message[2]))
-					try:
-						msg = await channel.fetch_message(int(path_message[3]))
 
 	async def get_message(self, guild, url):
 		checker = ["channels", str(guild.id)]
