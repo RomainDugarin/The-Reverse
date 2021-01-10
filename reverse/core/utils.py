@@ -125,7 +125,7 @@ def isListContains(lesser: list, bigger: list) -> bool:
 
 	return all(elem in lesser for elem in bigger)
 
-def isNameInList(self, name: str, array: list, attr: str = "name") -> bool:
+def isNameInList(name: str, array: list, attr: str = "name") -> bool:
 	"""Look for strings in a list of object on specific attribute
 
 	Parameters
@@ -220,7 +220,7 @@ def time_until(when) -> float:
 
 	return delta
 
-async def specifiedRole(self, name: str, guild: list, author: list, attr: str = "name", ctx = None):
+async def specifiedRole(name: str, guild: list, author: list, attr: str = "name", ctx = None):
 	"""A helper that check if the author has the specified role
 
 	Parameters
@@ -242,10 +242,10 @@ async def specifiedRole(self, name: str, guild: list, author: list, attr: str = 
 	"""
 	g_role = False
 	a_role = False
-	if(g_role := self.isNameInList(name, guild.roles)) == False:
+	if(g_role := isNameInList(name, guild.roles)) == False:
 		if(ctx is not None):
 			await ctx.send("You need to create the role `{}` to use this on you server.".format(name))
-	if(a_role := self.isNameInList(name, author.roles)) == False:
+	if(a_role := isNameInList(name, author.roles)) == False:
 		if(ctx is not None):
 			await ctx.send("You need the role `{}`.".format(name))
 	return all([g_role, a_role])
