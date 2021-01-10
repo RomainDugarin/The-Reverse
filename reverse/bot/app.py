@@ -32,7 +32,7 @@ class Bot(Reverse):
         ctx = Context(ctx)
         await ctx.send("Hello!")
 
-    async def heyo(self, ctx: Context, time: int, message: str):
+    async def remindme(self, ctx: Context, time: int, message: str):
         ctx = Context(ctx)
         await ctx.send("I will now wait {} seconds.".format(time))
         await asyncio.sleep(time)
