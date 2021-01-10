@@ -49,6 +49,7 @@ class Series(commands.Cog):
 			User ID
 		"""
 		self.b = BetaSeries(token, user)
+	
 
 	@commands.command(aliases=['bstart'])
 	async def betastart(self, ctx, *args):
@@ -61,17 +62,18 @@ class Series(commands.Cog):
 		"""
 		ctx = Context(ctx)
 		_kwargs, _args = utils.parse_args(args)
-		hour = _kwargs.get('hour', 7)
 		DEFAULT_CALL = self.release_today
 
 		# Coroutine next call Datetime
-		next_call = utils.now() + datetime.timedelta(days=1)
-		next_call = next_call.replace(hour=hour, minute=0, second=0)
+		next_call = utils.generate_next_call(days=int(_kwargs.get('day', 1)), hours=int(_kwargs.get('hour', 7)), minutes=int(_kwargs.get('minute', 0)), seconds=int(_kwargs.get('second', 0)))
 
 		# Get delta from now until next_call
 		delta = utils.time_until(next_call)
 		data = {
-			"Hour": 7,
+			"Day": _kwargs.get('day', 1),
+			"Hour": _kwargs.get('hour', 7),
+			"Minute": _kwargs.get('minute', 0),
+			"Second": _kwargs.get('second', 0),
 			"Timer": delta,
 			"Date": next_call
 		}
@@ -141,6 +143,20 @@ class Series(commands.Cog):
 					return
 				e.restart(**_kwargs)
 				await ctx.send("{} restart successfully.".format(_found))
+	
+	@commands.command(aliases=['bstop'])
+	async def betastop(self, ctx, name):
+		"""Stop task from name. Equivalent of !betarestart --task X stop force
+
+		Parameters
+		----------
+		ctx : :class:`reverse.core._models.Context`
+			Context
+		name: str
+			Task name
+		"""
+		args = '--task {} stop force'.format(name)
+		self.betarestart(ctx=ctx, args=args)
 
 	@commands.command()
 	async def pt(self, ctx):
@@ -166,6 +182,7 @@ class Series(commands.Cog):
 			ctx: :class:`reverse.core._models.Context`
 		"""
 		ctx = kwargs['ctx']
+		settings = kwargs['data']
 
 		data = await self.planning_today()
 		episodes = data.get('days', [])
@@ -182,6 +199,9 @@ class Series(commands.Cog):
 		embed.set_footer(text="".format("The Reverse"))
 
 		await ctx.send(embed=embed)
+
+		next_call = utils.generate_next_call(days=int(settings.get('Day', 1)), hours=int(settings.get('Hour', 7)), minutes=int(settings.get('Minute', 0)), seconds=int(settings.get('Second', 0)))
+		self.task.recalculate_interval('release_today', next_call)
 
 	async def planning_member(self) -> dict:
 		"""Return dictionnary of released planning of user
