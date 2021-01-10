@@ -1,6 +1,7 @@
 from discord.ext import commands
+import discord
 from reverse.core._models import Server, Message, Context
-from reverse.core import utils
+from reverse.core import utils, ReverseLogger
 import random
 
 
@@ -8,7 +9,12 @@ class Reverse():
 
 	def __init__(self, command_prefix, description=None, **kwargs):
 		print('Reverse : {}'.format(kwargs))
-		self.client = Server(commands.Bot(command_prefix=command_prefix, description=description, kwargs=kwargs))
+		intents = discord.Intents.default()
+		intents.typing = False
+		intents.presences = False
+		intents.members = True
+		intents.reactions = True
+		self.client = Server(commands.Bot(command_prefix=command_prefix, description=description, kwargs=kwargs, intents=intents))
 		self.instance = self.getClient()
 		self.cogs = []
 		self.defaultCogs = ['reverse.client.default', 'reverse.client.debugger.debugger']
@@ -17,6 +23,9 @@ class Reverse():
 			self.linkCogs(self.toLoadCogs)
 		else:
 			self.linkCogs(self.defaultCogs)
+
+		self.reverseNotepadLogger = ReverseLogger("ReverseNotepad")
+		self.reverseNSALogger = ReverseLogger("ReverseNSA")
 		
 
 	def run(self, token: str, cogs: list=[]):
@@ -61,8 +70,11 @@ class Reverse():
 	async def on_message(self, message):
 		m = Message(message)
 		print('We have detected a message from {0.author} saying {0.content}'.format(m.getData()))
-		if(self.instance.user.mentioned_in(message) and random.randint(1,3) == 1):
-			await message.channel.send("Yo! Shut up, stupid Hobbit! Don't @ me. Dipshit.")
+		self.reverseNSALogger.getInstance().info("<{0.guild}> {0.author}: {0.content}".format(m.getData()))
+		if(self.instance.user.mentioned_in(message)):
+			self.reverseNotepadLogger.getInstance().info("<{0.guild}> {0.author}: {0.content}".format(m.getData()))
+			if(random.randint(1,3) == 1):
+				await message.channel.send("\"T'as tellement pas de vie sociale que tu parles à des PNJ.\" - Stríðsherra Louis le Rouge")
 		await self.getClient().process_commands(message)
 	
 	async def on_disconnect(self):
