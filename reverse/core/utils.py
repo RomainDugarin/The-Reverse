@@ -107,7 +107,7 @@ def parse_args(args, delimiter='--') -> tuple:
 			continue
 	return (_kwargs, _args)
 
-def isListContains(self, lesser: list, bigger: list) -> bool:
+def isListContains(lesser: list, bigger: list) -> bool:
 	"""Check if bigger contains all elements in lesser
 
 	Parameters
@@ -219,3 +219,64 @@ def time_until(when) -> float:
 	delta = (when - now).total_seconds()
 
 	return delta
+
+async def specifiedRole(self, name: str, guild: list, author: list, attr: str = "name", ctx = None):
+	"""A helper that check if the author has the specified role
+
+	Parameters
+	----------
+	name : str
+		Role name
+	guild : list
+		Discord Server
+	author : list
+		Author 
+	attr : str, optional
+		by default "name"
+	ctx : [type], optional
+		Context, by default None
+
+	Returns
+	-------
+	Bool
+	"""
+	g_role = False
+	a_role = False
+	if(g_role := self.isNameInList(name, guild.roles)) == False:
+		if(ctx is not None):
+			await ctx.send("You need to create the role `{}` to use this on you server.".format(name))
+	if(a_role := self.isNameInList(name, author.roles)) == False:
+		if(ctx is not None):
+			await ctx.send("You need the role `{}`.".format(name))
+	return all([g_role, a_role])
+
+def generate_next_call(days:int=0, seconds:int=0, microseconds:int=0, milliseconds:int=0, minutes:int=0, hours:int=0, weeks:int=0, adding=False) -> datetime:
+	"""Generate datetime from now
+
+	Parameters
+	----------
+	days : int, optional
+		by default 0
+	seconds : int, optional
+		by default 0
+	microseconds : int, optional
+		by default 0
+	milliseconds : int, optional
+		by default 0
+	minutes : int, optional
+		by default 0
+	hours : int, optional
+		by default 0
+	weeks : int, optional
+		by default 0
+	adding : bool, optional
+		by default False
+
+	Returns
+	-------
+	datetime
+	"""
+	if(not adding):
+		return (now() + datetime.timedelta(days=days, weeks=weeks)).replace(second=seconds, microsecond=microseconds, minute=minutes, hour=hours)
+	else:
+		return now() + datetime.timedelta(days=days, seconds=seconds, microseconds=microseconds, milliseconds=milliseconds, minutes=minutes, hours=hours, weeks=weeks)
