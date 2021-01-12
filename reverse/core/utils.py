@@ -250,7 +250,7 @@ async def specifiedRole(name: str, guild: list, author: list, attr: str = "name"
 			await ctx.send("You need the role `{}`.".format(name))
 	return all([g_role, a_role])
 
-def generate_next_call(days:int=0, seconds:int=0, microseconds:int=0, milliseconds:int=0, minutes:int=0, hours:int=0, weeks:int=0, adding=False) -> datetime:
+def generate_next_call(days:int=0, seconds:int=0, microseconds:int=0, milliseconds:int=0, minutes:int=0, hours:int=0, weeks:int=0, adding:bool=False) -> datetime:
 	"""Generate datetime from now
 
 	Parameters
