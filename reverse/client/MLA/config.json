@@ -1,0 +1,12 @@
+{
+    "MLA": {
+        "version": "1.0",
+        "mysql": {
+            "MY_SQL_HOST": "127.0.0.1",
+            "MY_SQL_PORT": "3306",
+            "MY_SQL_USERNAME": "invite",
+            "MY_SQL_PASSWORD": "invite",
+            "MY_SQL_DATABASE": "MLA_Bot_BDD"
+        }
+    }
+}
