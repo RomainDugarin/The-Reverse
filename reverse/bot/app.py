@@ -22,7 +22,7 @@ class Bot(Reverse):
         self.getClient().event(self.on_ready)
         self.getClient().event(self.on_message)
         self.addCommand(self.hey, pass_context=True)
-        self.addCommand(self.heyo, pass_context=True)
+        self.addCommand(self.remindme, pass_context=True)
         self.addCommand(self.reload, pass_context=True)
 
     async def on_ready(self, ctx=None):
