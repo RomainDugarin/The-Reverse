@@ -65,7 +65,8 @@ class Series(commands.Cog):
 		DEFAULT_CALL = self.release_today
 
 		# Coroutine next call Datetime
-		next_call = utils.generate_next_call(days=int(_kwargs.get('day', 1)), hours=int(_kwargs.get('hour', 7)), minutes=int(_kwargs.get('minute', 0)), seconds=int(_kwargs.get('second', 0)))
+		next_call = utils.generate_next_call(days=int(_kwargs.get('day', 1)), hours=int(_kwargs.get('hour', 7)), minutes=int(_kwargs.get('minute', 0)), seconds=int(_kwargs.get('second', 0)), adding=True)
+		print(next_call)
 
 		# Get delta from now until next_call
 		delta = utils.time_until(next_call)
@@ -74,6 +75,7 @@ class Series(commands.Cog):
 			"Hour": _kwargs.get('hour', 7),
 			"Minute": _kwargs.get('minute', 0),
 			"Second": _kwargs.get('second', 0),
+			"Adding": _kwargs.get("adding", True),
 			"Timer": delta,
 			"Date": next_call
 		}
@@ -200,7 +202,8 @@ class Series(commands.Cog):
 
 		await ctx.send(embed=embed)
 
-		next_call = utils.generate_next_call(days=int(settings.get('Day', 1)), hours=int(settings.get('Hour', 7)), minutes=int(settings.get('Minute', 0)), seconds=int(settings.get('Second', 0)))
+		next_call = utils.generate_next_call(days=int(settings.get('Day', 1)), hours=int(settings.get('Hour', 7)), minutes=int(settings.get('Minute', 0)), seconds=int(settings.get('Second', 0)), adding=settings.get('Adding', False))
+		print(next_call)
 		self.task.recalculate_interval('release_today', next_call)
 
 	async def planning_member(self) -> dict:
