@@ -4,3 +4,4 @@ from .sqlite import SqliteService
 from .betaseries import BetaSeries, Route, json_or_text
 from .task import TaskService, loop
 from .logger import ReverseLogger
+from .mysql import MysqlService
