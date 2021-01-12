@@ -30,7 +30,6 @@ class DALRole():
 		magicmultiplier=1.2,
 		oid=None,
 		supplies=0):
-        self.data = message
-        self.run()
+		pass
 
 	
