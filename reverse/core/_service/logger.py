@@ -18,7 +18,7 @@ class ReverseLogger(logging.Logger):
 		self.logfile = "{}{}.log".format(path,name)
 		self.logformat = logformat or ("[%(asctime)s] %(levelname)-8s :: %(message)s")
 		self.formatter = logging.Formatter(self.logformat)
-		self.handler = logging.FileHandler(self.logfile)
+		self.handler = logging.FileHandler(self.logfile, encoding="utf-8")
 
 		self.handler.setFormatter(self.formatter)
 		self.instance.addHandler(self.handler)
