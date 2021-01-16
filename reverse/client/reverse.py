@@ -24,8 +24,8 @@ class Reverse():
 		else:
 			self.linkCogs(self.defaultCogs)
 
-		self.reverseNotepadLogger = ReverseLogger("ReverseNotepad")
-		self.reverseNSALogger = ReverseLogger("ReverseNSA")
+		self.reverseNotepadLogger = ReverseLogger("ReverseNotepad", initLog=False)
+		self.reverseNSALogger = ReverseLogger("ReverseNSA", consoleStream=True)
 		
 
 	def run(self, token: str, cogs: list=[]):
@@ -69,10 +69,9 @@ class Reverse():
 
 	async def on_message(self, message):
 		m = Message(message)
-		print('We have detected a message from {0.author} saying {0.content}'.format(m.getData()))
-		self.reverseNSALogger.getInstance().info("<{0.guild}> {0.author}: {0.content}".format(m.getData()))
+		self.reverseNSALogger.info("[{0.channel}] <{0.guild}:{0.author}>: {0.content}".format(m.getData()))
 		if(self.instance.user.mentioned_in(message)):
-			self.reverseNotepadLogger.getInstance().info("<{0.guild}> {0.author}: {0.content}".format(m.getData()))
+			self.reverseNotepadLogger.info("[{0.channel}] <{0.guild}:{0.author}>: {0.content}".format(m.getData()))
 		
 		ctx = Context(await self.getClient().get_context(message), __name__)
 		await self.getClient().invoke(ctx)
