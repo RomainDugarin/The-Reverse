@@ -56,3 +56,5 @@ venv.bak/
 etc/backend.json
 etc/
 run.ps1
+cogs.json
+
