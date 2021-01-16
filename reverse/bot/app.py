@@ -29,7 +29,6 @@ class Bot(Reverse):
         print('We have logged in as {0.user} using Bot implementation'.format(self.getClient()))
 
     async def hey(self, ctx: Context):
-        ctx = Context(ctx)
         await ctx.send("Hello!")
 
     async def remindme(self, ctx: Context, time: int, message: str):

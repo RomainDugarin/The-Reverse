@@ -73,9 +73,9 @@ class Reverse():
 		self.reverseNSALogger.getInstance().info("<{0.guild}> {0.author}: {0.content}".format(m.getData()))
 		if(self.instance.user.mentioned_in(message)):
 			self.reverseNotepadLogger.getInstance().info("<{0.guild}> {0.author}: {0.content}".format(m.getData()))
-			if(random.randint(1,3) == 1):
-				await message.channel.send("\"T'as tellement pas de vie sociale que tu parles à des PNJ.\" - Stríðsherra Louis le Rouge")
-		await self.getClient().process_commands(message)
+		
+		ctx = Context(await self.getClient().get_context(message), __name__)
+		await self.getClient().invoke(ctx)
 	
 	async def on_disconnect(self):
 		print("Restart")
