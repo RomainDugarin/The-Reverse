@@ -12,7 +12,7 @@ class ReverseLogger(logging.Logger):
         'env'
     ]
 
-	def __init__(self, name: str, level=logging.DEBUG, path="./", logformat="", initLog: bool = False) -> None:
+	def __init__(self, name: str, level=logging.DEBUG, path="./", logformat="", initLog: bool = False, consoleStream:bool = False) -> None:
 		"""Create a logger
 
 		Parameters
@@ -33,9 +33,12 @@ class ReverseLogger(logging.Logger):
 		self.logformat = logformat or ("[%(asctime)s] %(levelname)-8s :: %(message)s")
 		self.formatter = logging.Formatter(self.logformat)
 		self.handler = logging.FileHandler(self.logfile, encoding="utf-8")
+		
 
 		self.handler.setFormatter(self.formatter)
 		self.addHandler(self.handler)
 		self.setLevel(logging.DEBUG)
+		# Create console handler for logger
+		if(consoleStream): self.addHandler(logging.StreamHandler())
 		# Message of initialization 
 		if(initLog): self.info("Creation of the logging instance - {}/{}".format(self.name, self.logfile))
