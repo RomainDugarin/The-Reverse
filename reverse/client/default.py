@@ -27,6 +27,10 @@ class DefaultCog(commands.Cog):
 				await asyncio.sleep(wait)
 			async for message in channel.history(limit=amount+1):
 				await message.delete()
+
+	@commands.command()
+	async def gamer(self, ctx):
+		await ctx.send("Answer me and I will come to you, and I will tell you great and powerful things. Gamers, answer my call and I will give you glory.")
 	
 	@commands.command(pass_context=True, aliases=['mc', 'dcf'])
 	async def countfrom(self, ctx, *args):
@@ -55,6 +59,52 @@ class DefaultCog(commands.Cog):
 					print("could find message")
 					return
 
+		channel = channel or ctx.channel
+		count = 0
+
+		#TODO : Verifier que le bot a acces au channel avant de compter
+		async for message in channel.history(limit=None):
+			count += 1
+			if(message == msg):
+				break
+		
+		#TODO : Choisir un meilleur message
+		await ctx.send("Message is {}+1 layers deep.".format(count))
+
+	@commands.command(pass_context=True)
+	async def md(self, ctx, *args):
+
+		channel = ctx.message.channel
+		author  = ctx.author
+		guild   = ctx.guild
+		msg = None
+
+		_kwargs, _args = utils.parse_args(args)
+		obligatory_keys = ["start"]
+		print(_kwargs)
+		print(_args)
+
+		n = _kwargs.get("start", None)
+		for arg in obligatory_keys:
+			n = _kwargs.get(arg, None)
+			if((n := _kwargs.get(arg, None)) == None):
+				print("Argument \"{}\" missing.".format(arg))
+				return
+
+		try:
+			msg = await self.get_message(guild, _kwargs['start'])
+		except:
+			print("Link error.")
+			return
+
+		try:
+			if((n := _kwargs.get('end', None)) != None):
+				end = await self.get_message(guild, _kwargs['end'])
+		except:
+			print("End link error.")
+			return
+
+		
 		channel = channel or ctx.channel
 		count = 0
 
