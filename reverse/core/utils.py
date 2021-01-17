@@ -206,7 +206,7 @@ def now() -> datetime:
 	"""
 	return datetime.datetime.now(datetime.timezone.utc)
 
-def time_until(when) -> float:
+def time_until(when, startDate:datetime = None) -> float:
 	"""A helper that give delta from specified time
 
 	Parameters
@@ -215,7 +215,7 @@ def time_until(when) -> float:
 	"""
 	if when.tzinfo is None:
 		when = when.replace(tzinfo=datetime.timezone.utc)
-	now = datetime.datetime.now(datetime.timezone.utc)
+	now = startDate or datetime.datetime.now(datetime.timezone.utc)
 	delta = (when - now).total_seconds()
 
 	return delta
@@ -250,7 +250,7 @@ async def specifiedRole(name: str, guild: list, author: list, attr: str = "name"
 			await ctx.send("You need the role `{}`.".format(name))
 	return all([g_role, a_role])
 
-def generate_next_call(days:int=0, seconds:int=0, microseconds:int=0, milliseconds:int=0, minutes:int=0, hours:int=0, weeks:int=0, adding:bool=False) -> datetime:
+def generate_next_call(startDate:datetime=None, days:int=0, seconds:int=0, microseconds:int=0, milliseconds:int=0, minutes:int=0, hours:int=0, weeks:int=0, adding:bool=False) -> datetime:
 	"""Generate datetime from now
 
 	Parameters
@@ -276,10 +276,11 @@ def generate_next_call(days:int=0, seconds:int=0, microseconds:int=0, millisecon
 	-------
 	datetime
 	"""
+	_now = startDate or now()
 	if(not adding):
-		return (now() + datetime.timedelta(days=days, weeks=weeks)).replace(second=seconds, microsecond=microseconds, minute=minutes, hour=hours)
+		return (_now + datetime.timedelta(days=days, weeks=weeks)).replace(second=seconds, microsecond=microseconds, minute=minutes, hour=hours)
 	else:
-		return now() + datetime.timedelta(days=days, seconds=seconds, microseconds=microseconds, milliseconds=milliseconds, minutes=minutes, hours=hours, weeks=weeks)
+		return _now + datetime.timedelta(days=days, seconds=seconds, microseconds=microseconds, milliseconds=milliseconds, minutes=minutes, hours=hours, weeks=weeks)
 
 
 def getObjectsAttr(objects, attr) -> list:
