@@ -128,5 +128,17 @@ class Debugger(commands.Cog):
 		await asyncio.sleep(10)
 		await ctx.send("End tenstop")
 
+	@commands.command()
+	async def debugNextCall(self, ctx, *args):
+		"""Generate 10 datetime from generate_next_call, by default, addition is off, day = 1"""
+		_kwargs, _args = utils.parse_args(args)
+		_t = utils.now()
+		_adding = "adding" in _args
+		await ctx.send("0: {}".format(_t))
+		for i in range(1, 10):
+			_tminus = _t
+			_t = utils.generate_next_call(startDate=_t ,days=int(_kwargs.get('day', 1)), hours=int(_kwargs.get('hour', 0)), minutes=int(_kwargs.get('minute', 0)), seconds=int(_kwargs.get('second', 0)), adding=_adding)
+			await ctx.send("{}: {} - {}s".format(i,_t,utils.time_until(_t, startDate=_tminus)))
+
 def setup(bot):
 	bot.add_cog(Debugger(bot))
