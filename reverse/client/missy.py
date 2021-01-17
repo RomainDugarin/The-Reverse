@@ -17,7 +17,6 @@ class Missy(commands.Cog):
 	async def whoismissy(self, ctx):
 		await ctx.send("Une horreur lovecraftienne... Tempus edax rerum.")
 	
-	@commands.command()
 	async def debugSQL(self, ctx, table="missy", column="id integer PRIMARY KEY, name text"):
 		self.db.createTable(table, column)
 
@@ -27,9 +26,8 @@ class Missy(commands.Cog):
 		for v in record:
 			await ctx.send("Table {}.".format(*v))
 
-	async def tableToList(self) -> list:
-		record = self.db._fetchAll(self.db.listTable())
-		return [item for t in record for item in t]
+	async def tableToList(self, ctx) -> list:
+		await ctx.send(SqliteService.tableToList(self.db.listTable()))
 
 	@commands.command()
 	async def debugInsertAllMembers(self, ctx):
@@ -51,38 +49,6 @@ class Missy(commands.Cog):
 			return
 		await ctx.send("Server already initalized.")
 
-	async def newEvent(self, ctx, *args):
-		ctx = Context(ctx)
-		guild = ctx.guild
-		_kwargs, _args = utils.parse_args(args)
-		
-		t_guild = "{}_event".format(guild.name)
-
-		if(not self.db.isTableExist(t_guild)):
-			await ctx.send("Server not initialized.")
-			return
-		
-		if("role" in _kwargs.keys()):
-			r_id = _kwargs["role"][3:-1]
-			r = utils.getRole(r_id, guild)
-			t_event = "{}_{}".format(guild.name, r_id)
-
-			if(self.db.isTableExist(t_event)):
-				await ctx.send("Event already added.")
-			else:
-				# TODO Create event table specified and store scheduler
-				self.db.createTable(t_event, "id INTEGER PRIMARY KEY AUTOINCREMENT, ")
-				# TODO Scheduler asyncio, check service reverse.core._service.task
-
-			return
-		await ctx.send("Specify a role.")
-
-		
-
-	def getAllMembers(self, guild: Guild, roleID: int) -> list:
-		r = utils.getRole(int(roleID), guild)
-		return r.getAllMembers()
-
 	@commands.command()
 	async def members(self, ctx, *args):
 		ctx = Context(ctx)
@@ -90,7 +56,7 @@ class Missy(commands.Cog):
 		_kwargs, _args = utils.parse_args(args)
 		if("role" in _kwargs.keys()):
 			r_id = _kwargs["role"][3:-1]
-			_m = self.getAllMembers(guild, int(r_id))
+			_m = utils.getAllMembers(guild, int(r_id))
 
 			if(len(_m) >= 1):
 				for v in _m:
