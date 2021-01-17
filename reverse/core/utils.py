@@ -280,3 +280,21 @@ def generate_next_call(days:int=0, seconds:int=0, microseconds:int=0, millisecon
 		return (now() + datetime.timedelta(days=days, weeks=weeks)).replace(second=seconds, microsecond=microseconds, minute=minutes, hour=hours)
 	else:
 		return now() + datetime.timedelta(days=days, seconds=seconds, microseconds=microseconds, milliseconds=milliseconds, minutes=minutes, hours=hours, weeks=weeks)
+
+
+def getObjectsAttr(objects, attr) -> list:
+	"""Get specified attribute from a list of objects
+
+	Parameters
+	----------
+	objects : list of object
+
+	Returns
+	-------
+	list
+		list of attribute from objects
+	"""
+	_array = []
+	for obj in objects:
+		_array.append(getattr(obj, attr))
+	return _array
