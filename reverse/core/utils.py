@@ -91,7 +91,7 @@ def parse_args(args, delimiter='--') -> tuple:
 	Returns
 	-------
 	tuple
-		(*args, **kwargs)
+		(**kwargs, *args)
 	"""
 	_kwargs = {}
 	_args = []
