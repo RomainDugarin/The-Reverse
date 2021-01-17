@@ -1,9 +1,8 @@
 import json
 import os
 import datetime
-import asyncio
 from functools import partial
-from discord import Embed, Guild, utils
+from discord import Embed, Guild
 from reverse.core._models import Role
 
 utils_open = partial(open, encoding="UTF-8")
@@ -299,3 +298,20 @@ def getObjectsAttr(objects, attr) -> list:
 	for obj in objects:
 		_array.append(getattr(obj, attr))
 	return _array
+
+def getAllMembers(guild: Guild, roleID: int) -> list:
+	"""Get all members in guild, equivalent reverse.Role.getAllMembers()
+
+	Parameters
+	----------
+	guild : Guild
+		Discord server
+	roleID : int
+		Role id
+
+	Returns
+	-------
+	list
+	"""
+	r = getRole(int(roleID), guild)
+	return r.getAllMembers()
