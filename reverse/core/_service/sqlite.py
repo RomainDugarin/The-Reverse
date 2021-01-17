@@ -32,9 +32,15 @@ class SqliteService:
     def _commit(self):
         self.instance.commit()
     
-    def _fetchAll(self, cursor):
+    @staticmethod
+    def _fetchAll(cursor):
         records = cursor.fetchall()
         return records
+
+    @staticmethod
+    def tableToList(cursor) -> list:
+        record = SqliteService._fetchAll(cursor)
+        return [item for t in record for item in t]
 
     def createTable(self, tableName: str, configuration: str):
         """Create sqlite Table if it doesn't already exists
