@@ -69,12 +69,19 @@ class Reverse():
 
 	async def on_message(self, message):
 		m = Message(message)
-		self.reverseNSALogger.info("[{0.channel}] <{0.guild}:{0.author}>: {0.content}".format(m.getData()))
+		_attach = ""
+		if(message.attachments):
+			print(message.attachments)
+			_attach+="\n"
+			for i in utils.getObjectsAttr(message.attachments, "url"):
+				_attach += "      -> {}\n".format(i)
+		self.reverseNSALogger.info("[{0.channel}] <{0.guild}:{0.author}>: {0.content} {1}".format(m.getData(), _attach[:-1]))
 		if(self.instance.user.mentioned_in(message)):
-			self.reverseNotepadLogger.info("[{0.channel}] <{0.guild}:{0.author}>: {0.content}".format(m.getData()))
+			self.reverseNotepadLogger.info("[{0.channel}] <{0.guild}:{0.author}>: {0.content} {1}".format(m.getData(), _attach[:-1]))
 		
 		ctx = Context(await self.getClient().get_context(message), __name__)
 		await self.getClient().invoke(ctx)
+
 	
 	async def on_disconnect(self):
 		print("Restart")
