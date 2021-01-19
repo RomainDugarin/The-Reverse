@@ -71,7 +71,6 @@ class Reverse():
 		m = Message(message)
 		_attach = ""
 		if(message.attachments):
-			print(message.attachments)
 			_attach+="\n"
 			for i in utils.getObjectsAttr(message.attachments, "url"):
 				_attach += "      -> {}\n".format(i)
