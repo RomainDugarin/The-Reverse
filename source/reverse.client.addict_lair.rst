@@ -1,13 +1,13 @@
-reverse.client.debugger package
-===============================
+reverse.client.addict\_lair package
+===================================
 
 Submodules
 ----------
 
-reverse.client.debugger.debugger module
+reverse.client.addict\_lair.game module
 ---------------------------------------
 
-.. automodule:: reverse.client.debugger.debugger
+.. automodule:: reverse.client.addict_lair.game
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ reverse.client.debugger.debugger module
 Module contents
 ---------------
 
-.. automodule:: reverse.client.debugger
+.. automodule:: reverse.client.addict_lair
    :members:
    :undoc-members:
    :show-inheritance:

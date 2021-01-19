@@ -7,6 +7,8 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   reverse.client.MLA
+   reverse.client.addict_lair
    reverse.client.debugger
 
 Submodules
@@ -24,6 +26,14 @@ reverse.client.missy module
 ---------------------------
 
 .. automodule:: reverse.client.missy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+reverse.client.poc\_mood module
+-------------------------------
+
+.. automodule:: reverse.client.poc_mood
    :members:
    :undoc-members:
    :show-inheritance:
