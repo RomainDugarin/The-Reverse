@@ -7,7 +7,7 @@
 Assurez-vous d'abord d'avoir ce qui suit :
 
 - [git](https://git-scm.com/)
-- [Python 3.x](https://python.org/)
+- [Python >=3.9.x](https://python.org/)
 
 Maintenant, nous pouvons vérifier The Reverse et le cloner :
 
