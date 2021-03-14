@@ -34,7 +34,7 @@ python setup.py develop
 
 ## Contribution
 
-Veuillez lire [Contribution](CONTRIBUTING.md) pour plus d'information.
+Veuillez lire [Contribution](https://github.com/AlphaCodeCorp/Opus-Magnum/blob/master/CONTRIBUTION.md) pour plus d'information.
 
 ## Versioning
 
