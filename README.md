@@ -7,7 +7,7 @@
 Assurez-vous d'abord d'avoir ce qui suit :
 
 - [git](https://git-scm.com/)
-- [Python 3.x](https://python.org/)
+- [Python >=3.9.x](https://python.org/)
 
 Maintenant, nous pouvons vérifier The Reverse et le cloner :
 
@@ -34,7 +34,7 @@ python setup.py develop
 
 ## Contribution
 
-Veuillez lire [Contribution](CONTRIBUTING.md) pour plus d'information.
+Veuillez lire [Contribution](https://github.com/AlphaCodeCorp/Opus-Magnum/blob/master/CONTRIBUTION.md) pour plus d'information.
 
 ## Versioning
 
